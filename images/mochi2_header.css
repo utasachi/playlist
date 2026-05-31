@@ -1,0 +1,261 @@
+/* mochi2_header.css */
+/* 全体 */
+body {
+    font-family: "Segoe UI", "Yu Gothic UI", sans-serif;
+    background: #ffffff;
+    color: #000;
+    margin: 0;
+}
+/* リンク */
+a {
+    color: #000;
+    text-decoration: none;
+}
+/* Explorer風ヘッダー */
+.explorer-header {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    width: 100%;
+    gap: 10px;
+}
+/* 右側 */
+.header-text {
+    flex: 1;
+}
+/* 上段 */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 12px;
+}
+/* タイトル */
+.header-title {
+    font-size: 14px;
+    white-space: nowrap;
+}
+/* 検索フォーム */
+.header-search {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+/* パンくず＋メニュー行 */
+.breadcrumb-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+/* パンくず */
+.breadcrumb {
+    font-size: 13px;
+    flex: 1;
+}
+/* パンくずリンク */
+.breadcrumb a {
+    color: #0066cc;
+    text-decoration: none;
+}
+/* セパレータ */
+.breadcrumb span {
+    margin: 0 4px;
+    color: #666;
+}
+/* 現在位置 */
+.breadcrumb .current {
+    color: #000;
+    font-weight: bold;
+}
+
+/* メニュー */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+/* ▼マーカー消す */
+.menu summary {
+    list-style: none;
+    cursor: pointer;
+}
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+.menu-btn {
+    padding: 4px 10px;
+    border: 1px solid #aaa;
+    background: #eee;
+    border-radius: 6px;
+}
+.menu-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 180px;
+    padding: 6px 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    z-index: 1000;
+}
+.menu-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+.menu-content a:hover {
+    background: #def;
+}
+.menu-content a:active {
+    background: #cdf;
+}
+/* 超でかい */
+.bbig {
+    font-size: 32px;
+    font-weight: bold;
+}
+/* でかい */
+.big {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 中くらい */
+.mid {
+    font-size: 14px;
+    font-weight: bold;
+}
+.normal {
+    font-size: 13px;
+    font-weight: normal;
+}
+.normal-blue {
+    font-size: 12px;
+    font-weight: normal;
+    color: #448;
+}
+/* 小さい */
+.small {
+    font-size: 9px;
+    font-weight: normal;
+}
+/* ボタン */
+.btn {
+    font-size: 16px;
+    padding: 4px 10px;
+}
+
+/* pre的 */
+.pre-gray {
+    white-space: pre-wrap;
+    padding: 10px 3px 3px 10px;
+    background: #EEE;
+}
+.pre-allmp {
+    white-space: pre-wrap;
+    padding: 10px 3px 3px 10px;
+    background: #f8f8f8;
+}
+/* プレイリスト一覧 テーブル */
+.pl-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+/* プレイリスト一覧 行全体 */
+.pl-tr td {
+    padding: 3px 10px;
+    vertical-align: middle;
+}
+/* プレイリスト一覧 番号 */
+.pl-no {
+    font-size: 16px;
+    width: 36px;
+    text-align: right;
+    font-weight: bold;
+    background: #eee;
+}
+.pl-no1 {
+    width: 36px;
+    text-align: right;
+    font-weight: bold;
+    background: #f8f8f8;
+}
+/* プレイリスト一覧 アイコン */
+.pl-icon {
+    text-align: center;
+    background: #eee;
+}
+.pl-icon-hover {
+    text-align: center;
+    background: #f8f8f8;
+}
+.pl-img {
+    height: 108px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.pl-sicon {
+    float: right;
+    height: 72px;
+    margin-left: 10px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+/* プレイリスト一覧 メイン */
+.pl-main0 {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    background: #eee;
+}
+.pl-main1 {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    background: #f8f8f8;
+}
+.pl-main1-hover {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    background: #f8f8f8;
+}
+.pl-main2-hover {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    background: #fff;
+}
+.pl-smain {
+    font-size: 15px;
+    font-weight: normal;
+    color: #448;
+}
+/* プレイリスト一覧 コメント */
+.pl-comment {
+    font-size: 14px;
+    font-weight: normal;
+    color: #444;
+    background: #eee;
+}
+/* アンカー */
+.link-hover a {
+    background: #f8f8f8;
+}
+/* ホバー*/
+.pl-icon-hover:hover,
+.pl-main1-hover:hover,
+.pl-main2-hover:hover,
+.link-hover:hover {
+    background: #def;
+}
+/* クリック */
+.pl-icon-hover:active,
+.pl-main1-hover:active,
+.pl-main2-hover:active,
+.link-hover:active {
+    background: #cdf;
+}
