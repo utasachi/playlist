@@ -131,6 +131,11 @@ a {
     font-size: 13px;
     font-weight: normal;
 }
+.normal-gray {
+    font-size: 13px;
+    font-weight: normal;
+    color: #444
+}
 .normal-blue {
     font-size: 12px;
     font-weight: normal;
@@ -236,10 +241,11 @@ a {
 }
 /* プレイリスト一覧 コメント */
 .pl-comment {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     color: #444;
     background: #eee;
+    vertical-align: top;
 }
 /* アンカー */
 .link-hover a {
