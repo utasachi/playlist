@@ -9,748 +9,758 @@
 <!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
-<link rel="stylesheet" href="images/mochi2_header.css">
+<meta name="viewport" content="width=device-width, initial-scale=0.6">
+<link rel="stylesheet" href="images/mochi2_header.css?v=20260612">
+<link rel="stylesheet" href="images/mochi2_fancy2.css?v=20260612">
 <script src="images/mochi2_script.js" defer></script>
-<div class="explorer-header">
-    <a href="/">
-        <img src="images/mikuodori.gif">
-    </a>
-    <div class="header-text">
-        <div class="header-top">
-            <div class="header-title">
-<img src="images/mochikaraweb2.png" height="45" style="float:left; margin-right:10px;">
-v2.01 2026/06<br>
-🔈プレイリスト 2026/06/18 09時作成
+<table class="layout">
+    <tr>
+        <td rowspan="3"><a href="/"><img src="images/mikuodori.gif"></a></td>
+        <td colspan="2">
+            <div class="flex">
+                <div><img src="images/mochikaraweb2.png" height="53"></div>
+                <div class="right">
+                    <form class="search-form" action="/cgi-bin/mochi2_search.py" method="get">
+                        <input class="search-input" type="text" name="q" maxlength="64">
+                        <input class="btn" type="submit" value="検索">
+                    </form>
+                </div>
             </div>
-            <form class="header-search" action="/cgi-bin/mochi2_search.py" method="get">
-                <input type="text" name="q" size="32" maxlength="64">
-                <input type="submit" value="検索">
-            </form>
-        </div>
-        <div class="breadcrumb-row">
-            <div class="breadcrumb">
-                <span class=big>ぼっち・ざ・ろっく！ 結束バンド</span>
-            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="small-n">
+v2.01 2026/06 playlist 2026/06/26作成
+        </td>
+        <td rowspan="2" class="right">
             <details class="menu" data-menu="main">
                 <summary class="menu-btn">︙</summary>
                 <div class="menu-content">
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >🔉 音量(小)</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >🔊 音量(大)</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >音量(小) 🔉 </a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >音量(大) 🔊</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"   >⏭️ 次の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"  >⏮️ 前の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst" >⏯️ 停止/再生</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"   >⏪ 曲始めから</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"
+                     onclick="return confirm('⏭️次の曲に切り替えますか？');" >次の曲 ⏭️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"
+                     onclick="return confirm('⏮️前の曲に切り替えますか？');" >前の曲 ⏮️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst"
+                     onclick="return confirm('⏯️停止/再生切り替えますか？');">停止/再生 ⏯️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"
+                     onclick="return confirm('⏪曲始めから再生しますか？');" >曲始めから ⏪</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >🔳 全画面</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >🎶 次の音声</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >🔤 次の字幕</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >全画面 🔳</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >次の音声 🎶</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >次の字幕 🔤</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >⬆️ 字幕遅延減少</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >⬇️ 字幕遅延増加</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >字幕遅延減少 ⬆️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >字幕遅延増加 ⬇️</a>
                 </div>
             </details>
-        </div>
-    </div>
-</div>
-<a href="index.html"><img class="pl-sicon" src="https://cdn.tower.jp/za/o/9W/zaP5_H2043079W.JPG"></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="breadcrumb">
+<span class=big>ぼっち・ざ・ろっく！ 結束バンド</span>
+        </td>
+    </tr>
+</table><a href="index.html"><img class="pl-sicon" src="https://cdn.tower.jp/za/o/9W/zaP5_H2043079W.JPG"></a>
 <div class="pre-gray">はまじあき原作の漫画『ぼっち・ざ・ろっく！』及びそのアニメ化作品に登場する、劇中の同名ガールズバンドを再現した音楽ユニット
-レーベルはアニプレックス。<hr></div>
+レーベルはアニプレックス。</div><hr>
 <table class="pl-table">
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">1</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2002-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2002-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/n1K5BDHnr7c/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20OP%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ OP]青春コンプレックス／結束バンド LIVE.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20OP%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ OP]青春コンプレックス／結束バンド LIVE.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%AA%E3%83%BC%E3%83%97%E3%83%8B%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ オープニング映像]青春コンプレックス／結束バンド.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%AA%E3%83%BC%E3%83%97%E3%83%8B%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ オープニング映像]青春コンプレックス／結束バンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2009%20%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 09 青春コンプレックス.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2009%20%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 09 青春コンプレックス.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]青春コンプレックス／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]青春コンプレックス／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-25-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-25-青春コンプレックス.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-25-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-25-青春コンプレックス.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2002-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 02-青春コンプレックス.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2002-%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 02-青春コンプレックス.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">青春コンプレックス ／ 結束バンド<br>ぼっち・ざ・ろっく！ OP 表示回数:633,093回 [<a class="link-hover" href="https://www.uta-net.com/song/326631/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=QycW-bqD1BY">▶️youtube</a>] </td>
+  <td class="pl-comment">青春コンプレックス ／ 結束バンド<br>ぼっち・ざ・ろっく！ OP 表示回数:634,695回 [<a class="link-hover" href="https://www.uta-net.com/song/326631/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=QycW-bqD1BY">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">2</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2019-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2019-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/B3akM3m_tz0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20THE%20FIRST%20TAKE.mp4"><div class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</div>
-<span class="mid">[ぼっち・ざ・ろっく！]ギターと孤独と蒼い惑星／結束バンド THE FIRST TAKE.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20THE%20FIRST%20TAKE.mp4"><span class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]ギターと孤独と蒼い惑星／結束バンド THE FIRST TAKE.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]ギターと孤独と蒼い惑星／結束バンド mv.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]ギターと孤独と蒼い惑星／結束バンド mv.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2003%20%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 03 ギターと孤独と蒼い惑星.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2003%20%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 03 ギターと孤独と蒼い惑星.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]ギターと孤独と蒼い惑星／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]ギターと孤独と蒼い惑星／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-03-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-03-ギターと孤独と蒼い惑星.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-03-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-03-ギターと孤独と蒼い惑星.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2019-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 19-ギターと孤独と蒼い惑星.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2019-%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%A8%E5%AD%A4%E7%8B%AC%E3%81%A8%E8%92%BC%E3%81%84%E6%83%91%E6%98%9F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 19-ギターと孤独と蒼い惑星.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ギターと孤独と蒼い惑星 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:541,697回 [<a class="link-hover" href="https://www.uta-net.com/song/328190/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=B3akM3m_tz0">▶️youtube</a>] </td>
+  <td class="pl-comment">ギターと孤独と蒼い惑星 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:542,945回 [<a class="link-hover" href="https://www.uta-net.com/song/328190/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=B3akM3m_tz0">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">3</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2014-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2014-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/wSTbdqo-j74/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]星座になれたら／結束バンド LyricVideo.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]星座になれたら／結束バンド LyricVideo.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2005%20%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 05 星座になれたら.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2005%20%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 05 星座になれたら.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E8%B5%B7%E3%81%93%E3%82%89%E3%81%AA%E3%81%84ver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]星座になれたら(トラブル起こらないver)／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E8%B5%B7%E3%81%93%E3%82%89%E3%81%AA%E3%81%84ver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]星座になれたら(トラブル起こらないver)／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E6%96%87%E5%8C%96%E7%A5%ADver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]星座になれたら(文化祭ver)／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E6%96%87%E5%8C%96%E7%A5%ADver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]星座になれたら(文化祭ver)／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D%E7%94%9F%E9%85%8D%E4%BF%A1%E7%89%B9%E7%95%AA%EF%BC%81%EF%BC%81%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E7%94%9F%E9%85%8D%E4%BF%A1%E7%89%B9%E7%95%AAver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」生配信特番！！]星座になれたら(生配信特番ver)／結束バンド(舞台組) MV.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D%E7%94%9F%E9%85%8D%E4%BF%A1%E7%89%B9%E7%95%AA%EF%BC%81%EF%BC%81%5D%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89%28%E7%94%9F%E9%85%8D%E4%BF%A1%E7%89%B9%E7%95%AAver%29%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」生配信特番！！]星座になれたら(生配信特番ver)／結束バンド(舞台組) MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-18-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-18-星座になれたら.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-18-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-18-星座になれたら.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2014-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 14-星座になれたら.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2014-%E6%98%9F%E5%BA%A7%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E3%82%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 14-星座になれたら.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">星座になれたら ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:473,108回 [<a class="link-hover" href="https://www.uta-net.com/song/330462/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=1BnkvE-xxeI">▶️youtube</a>] </td>
+  <td class="pl-comment">星座になれたら ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:474,633回 [<a class="link-hover" href="https://www.uta-net.com/song/330462/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=1BnkvE-xxeI">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">4</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2013-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2013-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/gX9m-rCtSqc/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]忘れてやらない／結束バンド LyricVideo.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]忘れてやらない／結束バンド LyricVideo.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2010%20%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 10 忘れてやらない.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2010%20%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 10 忘れてやらない.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]忘れてやらない／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]忘れてやらない／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-16-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-16-忘れてやらない.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-16-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-16-忘れてやらない.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2013-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 13-忘れてやらない.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2013-%E5%BF%98%E3%82%8C%E3%81%A6%E3%82%84%E3%82%89%E3%81%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 13-忘れてやらない.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">忘れてやらない ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:307,764回 [<a class="link-hover" href="https://www.uta-net.com/song/330463/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=EY02nMUwXtA">▶️youtube</a>] </td>
+  <td class="pl-comment">忘れてやらない ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:308,687回 [<a class="link-hover" href="https://www.uta-net.com/song/330463/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=EY02nMUwXtA">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">5</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2009-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2009-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/5tc14WHUoMw/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]あのバンド／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]あのバンド／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2002%20%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 02 あのバンド.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2002%20%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 02 あのバンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]あのバンド／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]あのバンド／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-10-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-10-あのバンド.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-10-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-10-あのバンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2009-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 09-あのバンド.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2009-%E3%81%82%E3%81%AE%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 09-あのバンド.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">あのバンド ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:253,968回 [<a class="link-hover" href="https://www.uta-net.com/song/329198/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=iD3UgDPJcHg">▶️youtube</a>] </td>
+  <td class="pl-comment">あのバンド ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:254,528回 [<a class="link-hover" href="https://www.uta-net.com/song/329198/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=iD3UgDPJcHg">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">6</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2011-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2011-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/3ijkvUYwJhU/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ エンディング映像]なにが悪い／結束バンド.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ エンディング映像]なにが悪い／結束バンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20ED%5D%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84%EF%BC%8FGibson%20Replays%20%E5%8C%97%E6%BE%A4%E3%82%86%E3%81%86%E3%81%BB%20%28Vo%EF%BC%8FGt%29%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</div>
-<span class="mid">[ぼっち・ざ・ろっく！ ED]なにが悪い／Gibson Replays 北澤ゆうほ (Vo／Gt) MV.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20ED%5D%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84%EF%BC%8FGibson%20Replays%20%E5%8C%97%E6%BE%A4%E3%82%86%E3%81%86%E3%81%BB%20%28Vo%EF%BC%8FGt%29%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ ED]なにが悪い／Gibson Replays 北澤ゆうほ (Vo／Gt) MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-12-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-12-なにが悪い.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-12-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-12-なにが悪い.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2011-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 11-なにが悪い.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2011-%E3%81%AA%E3%81%AB%E3%81%8C%E6%82%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 11-なにが悪い.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">なにが悪い ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:204,551回 [<a class="link-hover" href="https://www.uta-net.com/song/329197/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=DgwJUI9ZxoQ">▶️youtube</a>] </td>
+  <td class="pl-comment">なにが悪い ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:204,990回 [<a class="link-hover" href="https://www.uta-net.com/song/329197/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=DgwJUI9ZxoQ">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">7</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2003-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2003-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/MTPiaDzacSI/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ エンディング映像]カラカラ／結束バンド.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5D%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ エンディング映像]カラカラ／結束バンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-08-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-08-カラカラ.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-08-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-08-カラカラ.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2003-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 03-カラカラ.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2003-%E3%82%AB%E3%83%A9%E3%82%AB%E3%83%A9.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 03-カラカラ.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">カラカラ ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:197,198回 [<a class="link-hover" href="https://www.uta-net.com/song/328189/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=GC2anXRztnA">▶️youtube</a>] </td>
+  <td class="pl-comment">カラカラ ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:197,537回 [<a class="link-hover" href="https://www.uta-net.com/song/328189/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=GC2anXRztnA">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">8</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2007-Distortion%21%21.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2007-Distortion%21%21.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/Xy6lZxoJ4ts/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5DDistortion%21%21%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ エンディング映像]Distortion!!／結束バンド.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%98%A0%E5%83%8F%5DDistortion%21%21%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ エンディング映像]Distortion!!／結束バンド.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5DDistortion%21%21%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]Distortion!!／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5DDistortion%21%21%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]Distortion!!／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-06-Distortion%21%21.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-06-Distortion!!.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-06-Distortion%21%21.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-06-Distortion!!.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2007-Distortion%21%21.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 07-Distortion!!.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2007-Distortion%21%21.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 07-Distortion!!.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Distortion!! ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:175,993回 [<a class="link-hover" href="https://www.uta-net.com/song/327466/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=na40F4AxiyE">▶️youtube</a>] </td>
+  <td class="pl-comment">Distortion!! ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:176,343回 [<a class="link-hover" href="https://www.uta-net.com/song/327466/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=na40F4AxiyE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">9</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D/%E3%80%90LIVE%E6%98%A0%E5%83%8F%E3%80%91%E3%80%8C%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%E3%80%8Dfrom%E3%80%8E%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D%E3%80%8F.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D/%E3%80%90LIVE%E6%98%A0%E5%83%8F%E3%80%91%E3%80%8C%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%E3%80%8Dfrom%E3%80%8E%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D%E3%80%8F.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/1-o7fmQqSNg/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]フラッシュバッカー 結束バンド mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]フラッシュバッカー 結束バンド mv.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-19-%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-19-フラッシュバッカー.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-19-%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-19-フラッシュバッカー.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D/%E3%80%90LIVE%E6%98%A0%E5%83%8F%E3%80%91%E3%80%8C%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%E3%80%8Dfrom%E3%80%8E%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D%E3%80%8F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド TOUR “We will B”</div>
-<span class="mid">【LIVE映像】「フラッシュバッカー」from『結束バンド TOUR “We will B”』.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D/%E3%80%90LIVE%E6%98%A0%E5%83%8F%E3%80%91%E3%80%8C%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%90%E3%83%83%E3%82%AB%E3%83%BC%E3%80%8Dfrom%E3%80%8E%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20TOUR%20%E2%80%9CWe%20will%20B%E2%80%9D%E3%80%8F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド TOUR “We will B”</span><br>
+<span class="link-hover-b">【LIVE映像】「フラッシュバッカー」from『結束バンド TOUR “We will B”』.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">フラッシュバッカー ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:121,005回 [<a class="link-hover" href="https://www.uta-net.com/song/330461/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=lPV-5s_2E4Y">▶️youtube</a>] </td>
+  <td class="pl-comment">フラッシュバッカー ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:121,301回 [<a class="link-hover" href="https://www.uta-net.com/song/330461/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=lPV-5s_2E4Y">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">10</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2018-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2018-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/B4mm3HYZYog/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20ED%5D%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！ ED]転がる岩、君に朝が降る／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20ED%5D%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！ ED]転がる岩、君に朝が降る／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2006%20%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 06 転がる岩、君に朝が降る.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2006%20%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 06 転がる岩、君に朝が降る.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]転がる岩、君に朝が降る／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]転がる岩、君に朝が降る／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-21-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-21-転がる岩、君に朝が降る.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-21-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-21-転がる岩、君に朝が降る.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2018-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 18-転がる岩、君に朝が降る.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2018-%E8%BB%A2%E3%81%8C%E3%82%8B%E5%B2%A9%E3%80%81%E5%90%9B%E3%81%AB%E6%9C%9D%E3%81%8C%E9%99%8D%E3%82%8B.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 18-転がる岩、君に朝が降る.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">転がる岩、君に朝が降る ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:118,958回 [<a class="link-hover" href="https://www.uta-net.com/song/330460/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=423emHW_KZQ">▶️youtube</a>] </td>
+  <td class="pl-comment">転がる岩、君に朝が降る ／ 結束バンド<br>ぼっち・ざ・ろっく！ ED 表示回数:119,150回 [<a class="link-hover" href="https://www.uta-net.com/song/330460/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=423emHW_KZQ">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">11</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2020-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2020-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/29t3pJd75XU/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">光の中へ／結束バンド MV.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">光の中へ／結束バンド MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-24-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-24-光の中へ.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-24-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-24-光の中へ.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2020-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 20-光の中へ.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2020-%E5%85%89%E3%81%AE%E4%B8%AD%E3%81%B8.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 20-光の中へ.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">光の中へ ／ 結束バンド<br> 表示回数:109,423回 [<a class="link-hover" href="https://www.uta-net.com/song/338010/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=eoA3B-shyPA">▶️youtube</a>] </td>
+  <td class="pl-comment">光の中へ ／ 結束バンド<br> 表示回数:109,758回 [<a class="link-hover" href="https://www.uta-net.com/song/338010/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=eoA3B-shyPA">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">12</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-02-%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-02-%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/LBQ0V85hdSc/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]ひとりぼっち東京／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]ひとりぼっち東京／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-02-%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-02-ひとりぼっち東京.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-02-%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%BC%E3%81%A3%E3%81%A1%E6%9D%B1%E4%BA%AC.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-02-ひとりぼっち東京.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ひとりぼっち東京 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:108,018回 [<a class="link-hover" href="https://www.uta-net.com/song/326630/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=PbwPWLCTktY">▶️youtube</a>] </td>
+  <td class="pl-comment">ひとりぼっち東京 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:108,200回 [<a class="link-hover" href="https://www.uta-net.com/song/326630/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=PbwPWLCTktY">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">13</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2001-%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2001-%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/WGAEIKRdSsE/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20THE%20FIRST%20TAKE.mp4"><div class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／結束バンド THE FIRST TAKE.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20THE%20FIRST%20TAKE.mp4"><span class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／結束バンド THE FIRST TAKE.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／結束バンド LyricVideo.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LyricVideo.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／結束バンド LyricVideo.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2008%20%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 08 月並みに輝け.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2008%20%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 08 月並みに輝け.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8FGibson%20Replays%20ASAKA%20%28TRiDENT%20Vo%EF%BC%8FGt%29%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／Gibson Replays ASAKA (TRiDENT Vo／Gt) MV.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20OP%5D%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91%EF%BC%8FGibson%20Replays%20ASAKA%20%28TRiDENT%20Vo%EF%BC%8FGt%29%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re： OP]月並みに輝け／Gibson Replays ASAKA (TRiDENT Vo／Gt) MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2001-%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 01-月並みに輝け.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2001-%E6%9C%88%E4%B8%A6%E3%81%BF%E3%81%AB%E8%BC%9D%E3%81%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 01-月並みに輝け.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">月並みに輝け ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re： OP 表示回数:78,459回 [<a class="link-hover" href="https://www.uta-net.com/song/356580/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=WGAEIKRdSsE">▶️youtube</a>] </td>
+  <td class="pl-comment">月並みに輝け ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re： OP 表示回数:78,853回 [<a class="link-hover" href="https://www.uta-net.com/song/356580/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=WGAEIKRdSsE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">14</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-11-%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-11-%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/HAi0zcO9Y6M/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]小さな海／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]小さな海／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]小さな海／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A1%E7%A7%80%E8%8F%AF%E7%A5%AD%5D%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅡ秀華祭]小さな海／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-11-%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-11-小さな海.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-11-%E5%B0%8F%E3%81%95%E3%81%AA%E6%B5%B7.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-11-小さな海.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">小さな海 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:75,693回 [<a class="link-hover" href="https://www.uta-net.com/song/330464/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=r-2ivMSedtY">▶️youtube</a>] </td>
+  <td class="pl-comment">小さな海 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:75,934回 [<a class="link-hover" href="https://www.uta-net.com/song/330464/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=r-2ivMSedtY">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">15</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-07-%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-07-%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/k9tEAzyFhxU/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]ひみつ基地／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]ひみつ基地／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-07-%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-07-ひみつ基地.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-07-%E3%81%B2%E3%81%BF%E3%81%A4%E5%9F%BA%E5%9C%B0.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-07-ひみつ基地.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ひみつ基地 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:73,626回 [<a class="link-hover" href="https://www.uta-net.com/song/330466/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=k9tEAzyFhxU">▶️youtube</a>] </td>
+  <td class="pl-comment">ひみつ基地 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:73,884回 [<a class="link-hover" href="https://www.uta-net.com/song/330466/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=k9tEAzyFhxU">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">16</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-04-%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-04-%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/5W4jhuSdxyE/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]ラブソングが歌えない／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]ラブソングが歌えない／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-04-%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-04-ラブソングが歌えない.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-04-%E3%83%A9%E3%83%96%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%8C%E6%AD%8C%E3%81%88%E3%81%AA%E3%81%84.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-04-ラブソングが歌えない.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ラブソングが歌えない ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:64,474回 [<a class="link-hover" href="https://www.uta-net.com/song/330465/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=U4hwHyHPdr4">▶️youtube</a>] </td>
+  <td class="pl-comment">ラブソングが歌えない ／ 結束バンド<br>ぼっち・ざ・ろっく！ 挿入歌 表示回数:64,716回 [<a class="link-hover" href="https://www.uta-net.com/song/330465/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=U4hwHyHPdr4">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">17</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-14-%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-14-%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/Ju2_ek7KZ1E/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[ぼっち・ざ・ろっく！]青い春と西の空／結束バンド AI背景.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%5D%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20AI%E8%83%8C%E6%99%AF.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[ぼっち・ざ・ろっく！]青い春と西の空／結束バンド AI背景.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-14-%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</div>
-<span class="mid">結束バンドLIVE-恒星-14-青い春と西の空.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20LIVE-%E6%81%92%E6%98%9F-/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89LIVE-%E6%81%92%E6%98%9F-14-%E9%9D%92%E3%81%84%E6%98%A5%E3%81%A8%E8%A5%BF%E3%81%AE%E7%A9%BA.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド LIVE-恒星-</span><br>
+<span class="link-hover-b">結束バンドLIVE-恒星-14-青い春と西の空.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">青い春と西の空 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:58,601回 [<a class="link-hover" href="https://www.uta-net.com/song/338009/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=IpBi0dguXcE">▶️youtube</a>] </td>
+  <td class="pl-comment">青い春と西の空 ／ 結束バンド<br>ぼっち・ざ・ろっく！ 表示回数:58,731回 [<a class="link-hover" href="https://www.uta-net.com/song/338009/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=IpBi0dguXcE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">18</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2016-%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2016-%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/duo1scb3dL0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20ED%5D%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re： ED]今、僕、アンダーグラウンドから／結束バンド MV.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20ED%5D%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re： ED]今、僕、アンダーグラウンドから／結束バンド MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20ED%5D%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89%EF%BC%8FGibson%20Replays%20%E5%8C%97%E6%BE%A4%E3%82%86%E3%81%86%E3%81%BB%20%28Vo%EF%BC%8FGt%29%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re： ED]今、僕、アンダーグラウンドから／Gibson Replays 北澤ゆうほ (Vo／Gt) MV.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/Gibson%20Replays/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9A%20ED%5D%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89%EF%BC%8FGibson%20Replays%20%E5%8C%97%E6%BE%A4%E3%82%86%E3%81%86%E3%81%BB%20%28Vo%EF%BC%8FGt%29%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ライブ映像/Gibson Replays</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re： ED]今、僕、アンダーグラウンドから／Gibson Replays 北澤ゆうほ (Vo／Gt) MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2016-%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 16-今、僕、アンダーグラウンドから.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2016-%E4%BB%8A%E3%80%81%E5%83%95%E3%80%81%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8B%E3%82%89.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 16-今、僕、アンダーグラウンドから.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">今、僕、アンダーグラウンドから ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re： ED 表示回数:48,883回 [<a class="link-hover" href="https://www.uta-net.com/song/356579/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=ayY-6g6upeQ">▶️youtube</a>] </td>
+  <td class="pl-comment">今、僕、アンダーグラウンドから ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re： ED 表示回数:49,075回 [<a class="link-hover" href="https://www.uta-net.com/song/356579/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=ayY-6g6upeQ">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">19</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2010-%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2010-%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/776pBhZ3oO0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9ARe%EF%BC%9A%20OP%5D%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！ Re：Re： OP]ドッペルゲンガー／結束バンド mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20Re%EF%BC%9ARe%EF%BC%9A%20OP%5D%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！ Re：Re： OP]ドッペルゲンガー／結束バンド mv.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2004%20%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 04 ドッペルゲンガー.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2004%20%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 04 ドッペルゲンガー.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</div>
-<span class="mid">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]ドッペルゲンガー／結束バンド(舞台組) Live.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/LIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024/%5BLIVE%20STAGE%E3%80%8C%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%E3%80%8D2024%20PART%E2%85%A0%20STARRY%5D%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%28%E8%88%9E%E5%8F%B0%E7%B5%84%29%20Live.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/LIVE STAGE「ぼっち・ざ・ろっく！」2024</span><br>
+<span class="link-hover-b">[LIVE STAGE「ぼっち・ざ・ろっく！」2024 PARTⅠ STARRY]ドッペルゲンガー／結束バンド(舞台組) Live.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2010-%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 10-ドッペルゲンガー.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2010-%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 10-ドッペルゲンガー.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ドッペルゲンガー ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re：Re： OP 表示回数:30,575回 [<a class="link-hover" href="https://www.uta-net.com/song/360964/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=vblnpRiOZjw">▶️youtube</a>] </td>
+  <td class="pl-comment">ドッペルゲンガー ／ 結束バンド<br>劇場総集編ぼっち・ざ・ろっく！ Re：Re： OP 表示回数:30,835回 [<a class="link-hover" href="https://www.uta-net.com/song/360964/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=vblnpRiOZjw">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">20</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2012-UNITE.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2012-UNITE.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/r3VUgI7zkto/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5DUNITE%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[結束バンド NEW EP We will]UNITE／結束バンド youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5DUNITE%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[結束バンド NEW EP We will]UNITE／結束バンド youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2012-UNITE.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 12-UNITE.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2012-UNITE.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 12-UNITE.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">UNITE ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:20,998回 [<a class="link-hover" href="https://www.uta-net.com/song/363818/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=0Xe8PvgfmoY">▶️youtube</a>] </td>
+  <td class="pl-comment">UNITE ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:21,160回 [<a class="link-hover" href="https://www.uta-net.com/song/363818/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=0Xe8PvgfmoY">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">21</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2005-%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2005-%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/H27Vs4kjyB0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E6%97%A5%E6%9C%AC%E3%82%B3%E3%82%AB%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%A9%E3%80%8C%E3%81%84%E3%82%8D%E3%81%AF%E3%81%99%E3%80%8D%5D%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[日本コカ・コーラ「いろはす」]僕と三原色／結束バンド MV.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E6%97%A5%E6%9C%AC%E3%82%B3%E3%82%AB%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%A9%E3%80%8C%E3%81%84%E3%82%8D%E3%81%AF%E3%81%99%E3%80%8D%5D%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20MV.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[日本コカ・コーラ「いろはす」]僕と三原色／結束バンド MV.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2005-%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 05-僕と三原色.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2005-%E5%83%95%E3%81%A8%E4%B8%89%E5%8E%9F%E8%89%B2.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 05-僕と三原色.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">僕と三原色 ／ 結束バンド<br>日本コカ・コーラ「いろはす」 表示回数:18,566回 [<a class="link-hover" href="https://www.uta-net.com/song/360963/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=YJJdlJctvyQ">▶️youtube</a>] </td>
+  <td class="pl-comment">僕と三原色 ／ 結束バンド<br>日本コカ・コーラ「いろはす」 表示回数:18,756回 [<a class="link-hover" href="https://www.uta-net.com/song/360963/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=YJJdlJctvyQ">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">22</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2017-Re%EF%BC%9ARe%EF%BC%9A.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2017-Re%EF%BC%9ARe%EF%BC%9A.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/nbu1mfzQTWA/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81Re%EF%BC%9ARe%EF%BC%9A%5DRe%EF%BC%9ARe%EF%BC%9A%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%28CV.%E9%9D%92%E5%B1%B1%E5%90%89%E8%83%BD%29%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[劇場総集編ぼっち・ざ・ろっく！Re：Re：]Re：Re：／後藤ひとり(CV.青山吉能) youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E5%8A%87%E5%A0%B4%E7%B7%8F%E9%9B%86%E7%B7%A8%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81Re%EF%BC%9ARe%EF%BC%9A%5DRe%EF%BC%9ARe%EF%BC%9A%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%28CV.%E9%9D%92%E5%B1%B1%E5%90%89%E8%83%BD%29%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[劇場総集編ぼっち・ざ・ろっく！Re：Re：]Re：Re：／後藤ひとり(CV.青山吉能) youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2007%20ReRe.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</div>
-<span class="mid">【CENTRAL2026】結束バンド 07 ReRe.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/CENTRAL%202026%204.4%20CENTRAL%20STAGE%2003%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E3%80%90CENTRAL2026%E3%80%91%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%2007%20ReRe.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/CENTRAL 2026 4.4 CENTRAL STAGE 03結束バンド</span><br>
+<span class="link-hover-b">【CENTRAL2026】結束バンド 07 ReRe.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2017-Re%EF%BC%9ARe%EF%BC%9A.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 17-Re：Re：.mp4</span>
+<tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2017-Re%EF%BC%9ARe%EF%BC%9A.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 17-Re：Re：.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Re：Re： ／ 後藤ひとり(CV.青山吉能)<br>劇場総集編ぼっち・ざ・ろっく！Re：Re： 表示回数:17,427回 [<a class="link-hover" href="https://www.uta-net.com/song/360961/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=Xk1FVQHDM7w">▶️youtube</a>] </td>
+  <td class="pl-comment">Re：Re： ／ 後藤ひとり(CV.青山吉能)<br>劇場総集編ぼっち・ざ・ろっく！Re：Re： 表示回数:17,547回 [<a class="link-hover" href="https://www.uta-net.com/song/360961/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=Xk1FVQHDM7w">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">23</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2015-%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2015-%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/-Bon11JtHfI/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">秒針少女／結束バンド youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">秒針少女／結束バンド youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2015-%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 15-秒針少女.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2015-%E7%A7%92%E9%87%9D%E5%B0%91%E5%A5%B3.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 15-秒針少女.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">秒針少女 ／ 結束バンド<br> 表示回数:17,159回 [<a class="link-hover" href="https://www.uta-net.com/song/360962/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=skQcl0LZkBE">▶️youtube</a>] </td>
+  <td class="pl-comment">秒針少女 ／ 結束バンド<br> 表示回数:17,337回 [<a class="link-hover" href="https://www.uta-net.com/song/360962/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=skQcl0LZkBE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">24</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2004-%E6%83%91%E3%81%86%E6%98%9F.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2004-%E6%83%91%E3%81%86%E6%98%9F.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/pZuv1yRz0Ek/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5D%E6%83%91%E3%81%86%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[結束バンド NEW EP We will]惑う星／結束バンド youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5D%E6%83%91%E3%81%86%E6%98%9F%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[結束バンド NEW EP We will]惑う星／結束バンド youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2004-%E6%83%91%E3%81%86%E6%98%9F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 04-惑う星.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2004-%E6%83%91%E3%81%86%E6%98%9F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 04-惑う星.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">惑う星 ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:16,925回 [<a class="link-hover" href="https://www.uta-net.com/song/363819/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=8ZHSnA46qIE">▶️youtube</a>] </td>
+  <td class="pl-comment">惑う星 ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:17,019回 [<a class="link-hover" href="https://www.uta-net.com/song/363819/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=8ZHSnA46qIE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">25</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2006-milky%20way.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2006-milky%20way.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/MtNuO_Sc9gs/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5Dmilky%20way%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[結束バンド NEW EP We will]milky way／結束バンド youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5Dmilky%20way%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[結束バンド NEW EP We will]milky way／結束バンド youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2006-milky%20way.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 06-milky way.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2006-milky%20way.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 06-milky way.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">milky way ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:14,478回 [<a class="link-hover" href="https://www.uta-net.com/song/363820/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=-_jTtUZIufs">▶️youtube</a>] </td>
+  <td class="pl-comment">milky way ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:14,558回 [<a class="link-hover" href="https://www.uta-net.com/song/363820/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=-_jTtUZIufs">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">26</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2008-%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2008-%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/tdOOhM8yY88/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5D%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[結束バンド NEW EP We will]夢を束ねて／結束バンド youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20NEW%20EP%20We%20will%5D%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6%EF%BC%8F%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[結束バンド NEW EP We will]夢を束ねて／結束バンド youtube.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2008-%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</div>
-<span class="mid">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 08-夢を束ねて.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda/%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%20Zepp%20Tour%202024%20%E2%80%9CWe%20Will%E2%80%9D%20Zepp%20Haneda%2008-%E5%A4%A2%E3%82%92%E6%9D%9F%E3%81%AD%E3%81%A6.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/ライブ映像/結束バンド Zepp Tour 2024 “We Will” Zepp Haneda</span><br>
+<span class="link-hover-b">結束バンド Zepp Tour 2024 “We Will” Zepp Haneda 08-夢を束ねて.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">夢を束ねて ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:14,440回 [<a class="link-hover" href="https://www.uta-net.com/song/363817/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=f38W-jWQPTE">▶️youtube</a>] </td>
+  <td class="pl-comment">夢を束ねて ／ 結束バンド<br>結束バンド NEW EP We will 表示回数:14,536回 [<a class="link-hover" href="https://www.uta-net.com/song/363817/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=f38W-jWQPTE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">27</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DCagayake%21GIRLS%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DCagayake%21GIRLS%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/FUS7v7e5DLg/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DCagayake%21GIRLS%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Cagayake!GIRLS／喜多郁代 youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DCagayake%21GIRLS%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Cagayake!GIRLS／喜多郁代 youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Cagayake!GIRLS ／ 喜多郁代<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:5,683回 [<a class="link-hover" href="https://www.uta-net.com/song/368023/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=c-hc_A4tQ20">▶️youtube</a>] </td>
+  <td class="pl-comment">Cagayake!GIRLS ／ 喜多郁代<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:5,749回 [<a class="link-hover" href="https://www.uta-net.com/song/368023/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=c-hc_A4tQ20">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">28</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DDaydream%20cafe%EF%BC%8F%E5%B1%B1%E7%94%B0%E3%83%AA%E3%83%A7%E3%82%A6%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DDaydream%20cafe%EF%BC%8F%E5%B1%B1%E7%94%B0%E3%83%AA%E3%83%A7%E3%82%A6%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/4uyUPa4V_8o/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DDaydream%20cafe%EF%BC%8F%E5%B1%B1%E7%94%B0%E3%83%AA%E3%83%A7%E3%82%A6%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Daydream cafe／山田リョウ youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DDaydream%20cafe%EF%BC%8F%E5%B1%B1%E7%94%B0%E3%83%AA%E3%83%A7%E3%82%A6%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Daydream cafe／山田リョウ youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Daydream cafe ／ 山田リョウ<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,789回 [<a class="link-hover" href="https://www.uta-net.com/song/368022/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=NwcIVpDG_Is">▶️youtube</a>] </td>
+  <td class="pl-comment">Daydream cafe ／ 山田リョウ<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,848回 [<a class="link-hover" href="https://www.uta-net.com/song/368022/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=NwcIVpDG_Is">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">29</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5D%E3%82%AD%E3%83%AB%E3%83%9F%E3%83%BC%E3%81%AE%E3%83%99%E3%82%A4%E3%83%99%E3%83%BC%21%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5D%E3%82%AD%E3%83%AB%E3%83%9F%E3%83%BC%E3%81%AE%E3%83%99%E3%82%A4%E3%83%99%E3%83%BC%21%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/w0sSxY2fIz0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5D%E3%82%AD%E3%83%AB%E3%83%9F%E3%83%BC%E3%81%AE%E3%83%99%E3%82%A4%E3%83%99%E3%83%BC%21%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[きらら トリビュート コレクション「結束バンドの歌ってみた」]キルミーのベイベー!／後藤ひとり youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5D%E3%82%AD%E3%83%AB%E3%83%9F%E3%83%BC%E3%81%AE%E3%83%99%E3%82%A4%E3%83%99%E3%83%BC%21%EF%BC%8F%E5%BE%8C%E8%97%A4%E3%81%B2%E3%81%A8%E3%82%8A%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[きらら トリビュート コレクション「結束バンドの歌ってみた」]キルミーのベイベー!／後藤ひとり youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">キルミーのベイベー! ／ 後藤ひとり<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,383回 [<a class="link-hover" href="https://www.uta-net.com/song/368021/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=8ngyL4lww8M">▶️youtube</a>] </td>
+  <td class="pl-comment">キルミーのベイベー! ／ 後藤ひとり<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,443回 [<a class="link-hover" href="https://www.uta-net.com/song/368021/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=8ngyL4lww8M">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">30</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DSHINY%20DAYS%EF%BC%8F%E4%BC%8A%E5%9C%B0%E7%9F%A5%E8%99%B9%E5%A4%8F%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DSHINY%20DAYS%EF%BC%8F%E4%BC%8A%E5%9C%B0%E7%9F%A5%E8%99%B9%E5%A4%8F%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/ooOkRJPpM6Q/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DSHINY%20DAYS%EF%BC%8F%E4%BC%8A%E5%9C%B0%E7%9F%A5%E8%99%B9%E5%A4%8F%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[きらら トリビュート コレクション「結束バンドの歌ってみた」]SHINY DAYS／伊地知虹夏 youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DSHINY%20DAYS%EF%BC%8F%E4%BC%8A%E5%9C%B0%E7%9F%A5%E8%99%B9%E5%A4%8F%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[きらら トリビュート コレクション「結束バンドの歌ってみた」]SHINY DAYS／伊地知虹夏 youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">SHINY DAYS ／ 伊地知虹夏<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,108回 [<a class="link-hover" href="https://www.uta-net.com/song/368020/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=Wo0mCgOS51A">▶️youtube</a>] </td>
+  <td class="pl-comment">SHINY DAYS ／ 伊地知虹夏<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,242回 [<a class="link-hover" href="https://www.uta-net.com/song/368020/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=Wo0mCgOS51A">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">31</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DWon%28%EF%BC%8A3%EF%BC%8A%29Chu%20Kiss%20Me%21%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DWon%28%EF%BC%8A3%EF%BC%8A%29Chu%20Kiss%20Me%21%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/2w3JULIzuww/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DWon%28%EF%BC%8A3%EF%BC%8A%29Chu%20Kiss%20Me%21%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</div>
-<span class="mid">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Won(＊3＊)Chu Kiss Me!／喜多郁代 youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89/%5B%E3%81%8D%E3%82%89%E3%82%89%20%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88%20%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8C%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%8D%5DWon%28%EF%BC%8A3%EF%BC%8A%29Chu%20Kiss%20Me%21%EF%BC%8F%E5%96%9C%E5%A4%9A%E9%83%81%E4%BB%A3%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/ぼっち・ざ・ろっく！ 結束バンド</span><br>
+<span class="link-hover-b">[きらら トリビュート コレクション「結束バンドの歌ってみた」]Won(＊3＊)Chu Kiss Me!／喜多郁代 youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Won(＊3＊)Chu Kiss Me! ／ 喜多郁代<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,043回 [<a class="link-hover" href="https://www.uta-net.com/song/368019/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=H12H3F9SWK8">▶️youtube</a>] </td>
+  <td class="pl-comment">Won(＊3＊)Chu Kiss Me! ／ 喜多郁代<br>きらら トリビュート コレクション「結束バンドの歌ってみた」 表示回数:4,118回 [<a class="link-hover" href="https://www.uta-net.com/song/368019/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=H12H3F9SWK8">▶️youtube</a>] </td>
 </tr>
 </table><!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
 <!--#include virtual="/cgi-bin/mochi2_footer.py" -->
 <hr>
-[<a href="#top">🔝Top</a>] 
-[<a href="/">🏠Home</a>] 
-[<a href="/htdocs/">📖Manual</a>] 
-<a href="/bgv/">🖼️<span class="small">bgv</span></a>
-<a href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small">dev</span></a> - 
-<span class="small">mochikara web^2 all rights reserved.</span>
-</br></br>
+[<a class="link-hover-b" href="#top">🔝Top</a>] 
+[<a class="link-hover-b" href="/">🏠Home</a>] 
+[<a class="link-hover-b" href="/htdocs/">📖Manual</a>] 
+<a class="link-hover-b" href="/bgv/">🖼️<span class="small-n">bgv</span></a>
+<a class="link-hover-b" href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small-n">dev</span></a> 
+<div class="small"> - mochikara web^2 all rights reserved.</div>
+</br>

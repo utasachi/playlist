@@ -9,60 +9,70 @@
 <!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
-<link rel="stylesheet" href="images/mochi2_header.css">
+<meta name="viewport" content="width=device-width, initial-scale=0.6">
+<link rel="stylesheet" href="images/mochi2_header.css?v=20260612">
+<link rel="stylesheet" href="images/mochi2_fancy2.css?v=20260612">
 <script src="images/mochi2_script.js" defer></script>
-<div class="explorer-header">
-    <a href="/">
-        <img src="images/mikuodori.gif">
-    </a>
-    <div class="header-text">
-        <div class="header-top">
-            <div class="header-title">
-<img src="images/mochikaraweb2.png" height="45" style="float:left; margin-right:10px;">
-v2.01 2026/06<br>
-🔈プレイリスト 2026/06/18 11時作成
+<table class="layout">
+    <tr>
+        <td rowspan="3"><a href="/"><img src="images/mikuodori.gif"></a></td>
+        <td colspan="2">
+            <div class="flex">
+                <div><img src="images/mochikaraweb2.png" height="53"></div>
+                <div class="right">
+                    <form class="search-form" action="/cgi-bin/mochi2_search.py" method="get">
+                        <input class="search-input" type="text" name="q" maxlength="64">
+                        <input class="btn" type="submit" value="検索">
+                    </form>
+                </div>
             </div>
-            <form class="header-search" action="/cgi-bin/mochi2_search.py" method="get">
-                <input type="text" name="q" size="32" maxlength="64">
-                <input type="submit" value="検索">
-            </form>
-        </div>
-        <div class="breadcrumb-row">
-            <div class="breadcrumb">
-                <span class=big>【うたさちHDD】プレイリストIndex</span>
-            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="small-n">
+v2.01 2026/06 playlist 2026/06/26作成
+        </td>
+        <td rowspan="2" class="right">
             <details class="menu" data-menu="main">
                 <summary class="menu-btn">︙</summary>
                 <div class="menu-content">
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >🔉 音量(小)</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >🔊 音量(大)</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >音量(小) 🔉 </a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >音量(大) 🔊</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"   >⏭️ 次の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"  >⏮️ 前の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst" >⏯️ 停止/再生</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"   >⏪ 曲始めから</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"
+                     onclick="return confirm('⏭️次の曲に切り替えますか？');" >次の曲 ⏭️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"
+                     onclick="return confirm('⏮️前の曲に切り替えますか？');" >前の曲 ⏮️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst"
+                     onclick="return confirm('⏯️停止/再生切り替えますか？');">停止/再生 ⏯️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"
+                     onclick="return confirm('⏪曲始めから再生しますか？');" >曲始めから ⏪</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >🔳 全画面</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >🎶 次の音声</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >🔤 次の字幕</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >全画面 🔳</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >次の音声 🎶</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >次の字幕 🔤</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >⬆️ 字幕遅延減少</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >⬇️ 字幕遅延増加</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >字幕遅延減少 ⬆️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >字幕遅延増加 ⬇️</a>
                 </div>
             </details>
-        </div>
-    </div>
-</div>
-<a href="index.html"><img class="pl-sicon" src="images/youtubeプレイリストindex.png"></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="breadcrumb">
+<span class=big>【うたさちHDD】プレイリストIndex</span>
+        </td>
+    </tr>
+</table><a href="index.html"><img class="pl-sicon" src="images/youtubeプレイリストindex.png"></a>
 <div class="pre-gray">もちからHDDにあるプレイリストの一覧です。順次追加していきます！
-プレイリストiconの一部は生成AIを使用しております<hr></div>
+プレイリストiconの一部は生成AIを使用しております</div><hr>
 <table class="pl-table">
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">1</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E5%86%85%E5%AE%B9%E8%AA%AC%E6%98%8E.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E5%86%85%E5%AE%B9%E8%AA%AC%E6%98%8E.html">
     <img class="pl-img" src="images/メディアライブラリとアニメのプレイリスト.png"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E5%86%85%E5%AE%B9%E8%AA%AC%E6%98%8E.html">
-    <b>【うたさちHDD】フォルダ内容説明.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E5%86%85%E5%AE%B9%E8%AA%AC%E6%98%8E.html">
+    <b><span class="link-hover-b">【うたさちHDD】フォルダ内容説明.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">mixi発祥のコミュニティ【唄うことに幸せを感じる人】から引き継がれた持込カラオケ運営用のHDD内容説明です<br />唄幸(うたさち):https://mixi.jp/view_community.pl?id=127315</td>
@@ -70,10 +80,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">2</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E6%96%B0%E8%AD%9C%E4%B8%80%E8%A6%A7.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E6%96%B0%E8%AD%9C%E4%B8%80%E8%A6%A7.html">
     <img class="pl-img" src="images/サイバーメロディーの夜.png"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E6%96%B0%E8%AD%9C%E4%B8%80%E8%A6%A7.html">
-    <b>【うたさちHDD】新譜一覧.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E6%96%B0%E8%AD%9C%E4%B8%80%E8%A6%A7.html">
+    <b><span class="link-hover-b">【うたさちHDD】新譜一覧.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">もちからHDDに新しく追加された新譜の一覧です。プレイリストに統合しました。<br />最新のアニメタイアップは uta-netアニメ一覧 を参照ください</td>
@@ -81,10 +91,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">3</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E9%81%8E%E5%8E%BB%E5%9B%9E%E3%82%BB%E3%83%83%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E9%81%8E%E5%8E%BB%E5%9B%9E%E3%82%BB%E3%83%83%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88.html">
     <img class="pl-img" src="images/過去回セットリスト.png"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E9%81%8E%E5%8E%BB%E5%9B%9E%E3%82%BB%E3%83%83%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88.html">
-    <b>【うたさちHDD】過去回セットリスト.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E9%81%8E%E5%8E%BB%E5%9B%9E%E3%82%BB%E3%83%83%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88.html">
+    <b><span class="link-hover-b">【うたさちHDD】過去回セットリスト.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">過去のもちからOFFで歌われた曲のリストです、コロナ後の2024/04/27のoffから記録<br />以前にどんな曲が歌われたのかな、というときはこちらを参照ください</td>
@@ -92,10 +102,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">4</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A101%E6%9C%88%EF%BD%9E03%E6%9C%88%EF%BC%88%E5%86%AC%EF%BC%89.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A101%E6%9C%88%EF%BD%9E03%E6%9C%88%EF%BC%88%E5%86%AC%EF%BC%89.html">
     <img class="pl-img" src="images/歌ネットの冬アニメ主題歌.png"></a></td>
-  <td class="pl-main1-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A101%E6%9C%88%EF%BD%9E03%E6%9C%88%EF%BC%88%E5%86%AC%EF%BC%89.html">
-    <b>uta-netアニメ01月～03月（冬）.html</b></a></td>
+  <td class="pl-main1"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A101%E6%9C%88%EF%BD%9E03%E6%9C%88%EF%BC%88%E5%86%AC%EF%BC%89.html">
+    <b><span class="link-hover-b">uta-netアニメ01月～03月（冬）.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">2026年1月期（第１クォーター）<br />uta-netのTV ANIME SONGSに掲載されたOP曲、ED曲の一覧です</td>
@@ -103,10 +113,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">5</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A104%E6%9C%88%EF%BD%9E06%E6%9C%88%EF%BC%88%E6%98%A5%EF%BC%89.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A104%E6%9C%88%EF%BD%9E06%E6%9C%88%EF%BC%88%E6%98%A5%EF%BC%89.html">
     <img class="pl-img" src="images/歌ネットの春アニメ主題歌.png"></a></td>
-  <td class="pl-main1-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A104%E6%9C%88%EF%BD%9E06%E6%9C%88%EF%BC%88%E6%98%A5%EF%BC%89.html">
-    <b>uta-netアニメ04月～06月（春）.html</b></a></td>
+  <td class="pl-main1"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A104%E6%9C%88%EF%BD%9E06%E6%9C%88%EF%BC%88%E6%98%A5%EF%BC%89.html">
+    <b><span class="link-hover-b">uta-netアニメ04月～06月（春）.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">2026年4月期（第２クォーター）<br />uta-netのTV ANIME SONGSに掲載されたOP曲、ED曲の一覧です</td>
@@ -114,10 +124,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">6</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A107%E6%9C%88%EF%BD%9E09%E6%9C%88%EF%BC%88%E5%A4%8F%EF%BC%89.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A107%E6%9C%88%EF%BD%9E09%E6%9C%88%EF%BC%88%E5%A4%8F%EF%BC%89.html">
     <img class="pl-img" src="images/歌ネットの夏アニメ主題歌.png"></a></td>
-  <td class="pl-main1-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A107%E6%9C%88%EF%BD%9E09%E6%9C%88%EF%BC%88%E5%A4%8F%EF%BC%89.html">
-    <b>uta-netアニメ07月～09月（夏）.html</b></a></td>
+  <td class="pl-main1"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A107%E6%9C%88%EF%BD%9E09%E6%9C%88%EF%BC%88%E5%A4%8F%EF%BC%89.html">
+    <b><span class="link-hover-b">uta-netアニメ07月～09月（夏）.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">2025年7月期（第３クォーター）<br />uta-netのTV ANIME SONGSに掲載されたOP曲、ED曲の一覧です</td>
@@ -125,10 +135,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">7</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A110%E6%9C%88%EF%BD%9E12%E6%9C%88%EF%BC%88%E7%A7%8B%EF%BC%89.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A110%E6%9C%88%EF%BD%9E12%E6%9C%88%EF%BC%88%E7%A7%8B%EF%BC%89.html">
     <img class="pl-img" src="images/歌ネットの秋アニメ主題歌.png"></a></td>
-  <td class="pl-main1-hover"><a  href="uta-net%E3%82%A2%E3%83%8B%E3%83%A110%E6%9C%88%EF%BD%9E12%E6%9C%88%EF%BC%88%E7%A7%8B%EF%BC%89.html">
-    <b>uta-netアニメ10月～12月（秋）.html</b></a></td>
+  <td class="pl-main1"><a href="uta-net%E3%82%A2%E3%83%8B%E3%83%A110%E6%9C%88%EF%BD%9E12%E6%9C%88%EF%BC%88%E7%A7%8B%EF%BC%89.html">
+    <b><span class="link-hover-b">uta-netアニメ10月～12月（秋）.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">2025年10月期（第４クォーター）<br />uta-netのTV ANIME SONGSに掲載されたOP曲、ED曲の一覧です</td>
@@ -136,32 +146,32 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">8</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="THE%20FIRST%20TAKE.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="THE%20FIRST%20TAKE.html">
     <img class="pl-img" src="https://yt3.googleusercontent.com/_PoRJpwlHmc2i2gQgXliEJ3HvgrspH3enTCuAfRrBFZE1ziCIfpcB8wdWuvkbGQ_K4sAA7vX28A=s160-c-k-c0x00ffffff-no-rj"></a></td>
-  <td class="pl-main1-hover"><a  href="THE%20FIRST%20TAKE.html">
-    <b>THE FIRST TAKE.html</b></a></td>
+  <td class="pl-main1"><a href="THE%20FIRST%20TAKE.html">
+    <b><span class="link-hover-b">THE FIRST TAKE.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">■RULES  白いスタジオに置かれた一本のマイク。ここでのルールはただ一つ。一発撮りのパフォーマンスをすること。<br />■STATEMENT  一発撮りで切りとる。今という時間と、今しか出せない音を。<br>  THE FIRST TAKE この瞬間は、二度とない。</td>
+  <td class="pl-comment">白いスタジオに置かれた一本のマイク。ここでのルールはただ一つ。一発撮りのパフォーマンスをすること。<br />一発撮りで切りとる。今という時間と、今しか出せない音を。THE FIRST TAKE この瞬間は、二度とない。</td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">9</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="THE%20FIRST%20TAKE%20%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%E3%82%B9.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="THE%20FIRST%20TAKE%20%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%E3%82%B9.html">
     <img class="pl-img" src="https://ogre.natalie.mu/media/news/music/2022/1116/THEFIRSTTAKE_logo_3rd.jpg?imwidth=750&imdensity=1"></a></td>
-  <td class="pl-main1-hover"><a  href="THE%20FIRST%20TAKE%20%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%E3%82%B9.html">
-    <b>THE FIRST TAKE アニメテーマソングス.html</b></a></td>
+  <td class="pl-main1"><a href="THE%20FIRST%20TAKE%20%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%E3%82%B9.html">
+    <b><span class="link-hover-b">THE FIRST TAKE アニメテーマソングス.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">■RULES  白いスタジオに置かれた一本のマイク。ここでのルールはただ一つ。一発撮りのパフォーマンスをすること。<br />■STATEMENT  一発撮りで切りとる。今という時間と、今しか出せない音を。<br> 人気アニメの主題歌が一発撮りの緊張感の中で披露され、多くの動画が1,000万回再生を超える人気コンテンツとなっています。 </td>
+  <td class="pl-comment">白いスタジオに置かれた一本のマイク。ここでのルールはただ一つ。一発撮りのパフォーマンスをすること。<br />人気アニメの主題歌が一発撮りの緊張感の中で披露され、多くの動画が1,000万回再生を超える人気コンテンツとなっています。 </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">10</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%EF%BC%81.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%EF%BC%81.html">
     <img class="pl-img" src="https://lh3.googleusercontent.com/3szaEPLzXLbLpAUgF6xGwFBPdQT8DCGPT0ebvuVNStJ2Bl1EgvJFC7ZPp8RFC98YLBQ36c0rm8La8b0=w544-h544-l90-rj"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%EF%BC%81.html">
-    <b>アニソン！.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%EF%BC%81.html">
+    <b><span class="link-hover-b">アニソン！.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">今もっともアツい日本のアニメソング（アニソン）を一つのプレイリストに。<br /> YouTube Music 公式 自動生成 Mix / Radio（RD系）プレイリスト</td>
@@ -169,10 +179,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">11</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%E3%83%99%E3%82%B9%E3%83%88%20Animes%20Biggest%20Hits.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%E3%83%99%E3%82%B9%E3%83%88%20Animes%20Biggest%20Hits.html">
     <img class="pl-img" src="https://lh3.googleusercontent.com/D0SgMSzShvTcdvJUciiIwaWH2cXZxdZUA67XPyFQr9WWw4bYdfSR0dz9ZARwYeLmFBn2Ya5pqbbjgA=w544-h544-l90-rj"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%E3%83%99%E3%82%B9%E3%83%88%20Animes%20Biggest%20Hits.html">
-    <b>アニソンベスト Animes Biggest Hits.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3%E3%83%99%E3%82%B9%E3%83%88%20Animes%20Biggest%20Hits.html">
+    <b><span class="link-hover-b">アニソンベスト Animes Biggest Hits.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">歴代のアニソンから、最も聞かれたスーパー・ヒッツをまとめてお届け。<br /> YouTube Music 公式 自動生成 Mix / Radio（RD系）プレイリスト</td>
@@ -180,10 +190,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">12</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%20765PRO%20ALLSTARS.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%20765PRO%20ALLSTARS.html">
     <img class="pl-img" src="https://cdn.tower.jp/za/o/80/4571177053480.jpg"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%20765PRO%20ALLSTARS.html">
-    <b>アイドルマスター 765PRO ALLSTARS.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%20765PRO%20ALLSTARS.html">
+    <b><span class="link-hover-b">アイドルマスター 765PRO ALLSTARS.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">比較的新しい3Dモデルのゲームなどの動画を背景にした、日本コロムビア 公式YouTubeチャンネルの全103曲<br />タイミングは多少同期させましたが、フル尺の曲にショート分の動画を付与しているので２番から合わなくなるのはご容赦ください</td>
@@ -191,10 +201,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">13</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%83%A9%E3%83%96%E3%83%A9%E3%82%A4%E3%83%96%21%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%21%21%20Liella%21.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%83%A9%E3%83%96%E3%83%A9%E3%82%A4%E3%83%96%21%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%21%21%20Liella%21.html">
     <img class="pl-img" src="https://cdn.tower.jp/za/o/6W/zaP5_G3871906W.JPG"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%83%A9%E3%83%96%E3%83%A9%E3%82%A4%E3%83%96%21%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%21%21%20Liella%21.html">
-    <b>ラブライブ!スーパースター!! Liella!.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%83%A9%E3%83%96%E3%83%A9%E3%82%A4%E3%83%96%21%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%21%21%20Liella%21.html">
+    <b><span class="link-hover-b">ラブライブ!スーパースター!! Liella!.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">ラブライブ！シリーズ公式チャンネル 自動生成チャンネル曲まとめプレイリスト<br />ライブ映像を背景動画にした LiveBGV が大部分。一部 AnimeMV もあり。</td>
@@ -202,10 +212,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">14</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.html">
     <img class="pl-img" src="https://cdn.tower.jp/za/o/9W/zaP5_H2043079W.JPG"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.html">
-    <b>ぼっち・ざ・ろっく！ 結束バンド.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%81%BC%E3%81%A3%E3%81%A1%E3%83%BB%E3%81%96%E3%83%BB%E3%82%8D%E3%81%A3%E3%81%8F%EF%BC%81%20%E7%B5%90%E6%9D%9F%E3%83%90%E3%83%B3%E3%83%89.html">
+    <b><span class="link-hover-b">ぼっち・ざ・ろっく！ 結束バンド.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">はまじあき原作の漫画『ぼっち・ざ・ろっく！』及びそのアニメ化作品に登場する、劇中の同名ガールズバンドを再現した音楽ユニット<br />レーベルはアニプレックス。</td>
@@ -213,10 +223,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">15</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC.html">
     <img class="pl-img" src="https://cdn.tower.jp/za/o/3W/zaP5_G6401813W.JPG"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC.html">
-    <b>ウマ娘 プリティーダービー.html</b></a></td>
+  <td class="pl-main1"><a href="%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC.html">
+    <b><span class="link-hover-b">ウマ娘 プリティーダービー.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">プレイリスト ウマ娘 キャラソン 全曲 | Uma Musume Pretty Durby<br />公式動画ループ、非公式MAD、ライブシアター動画などを背景にカラオケ</td>
@@ -224,10 +234,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">16</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81.html">
     <img class="pl-img" src="https://cdn.tower.jp/za/o/4W/zaP5_G3908764W.JPG"></a></td>
-  <td class="pl-main1-hover"><a  href="%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81.html">
-    <b>超かぐや姫！.html</b></a></td>
+  <td class="pl-main1"><a href="%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81.html">
+    <b><span class="link-hover-b">超かぐや姫！.html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">日本最古の物語『かぐや姫』 × 豪華ボカロP 新時代の音楽アニメーションプロジェクト、開幕！<br />新進気鋭のクリエイターたちが繰り広げる壮大なライブ・エンターテイメントが今、始まる。</td>
@@ -235,10 +245,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">17</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28%E5%8B%95%E7%94%BB%29.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28%E5%8B%95%E7%94%BB%29.html">
     <img class="pl-img" src="images/ファイル一覧動画.png"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28%E5%8B%95%E7%94%BB%29.html">
-    <b>【うたさちHDD】ファイル一覧(動画).html</b></a></td>
+  <td class="pl-main1"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28%E5%8B%95%E7%94%BB%29.html">
+    <b><span class="link-hover-b">【うたさちHDD】ファイル一覧(動画).html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">すべての動画一覧(mp4など)、ブラウザの検索機能(CTRL+F)でファイルを探してください<br />ファイルサイズが巨大なのでご注意ください</td>
@@ -246,10 +256,10 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">18</td>
-  <td rowspan=2 class="pl-icon-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28mp3%29.html">
+  <td rowspan=2 class="pl-icon-hover"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28mp3%29.html">
     <img class="pl-img" src="images/ファイル一覧mp3.png"></a></td>
-  <td class="pl-main1-hover"><a  href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28mp3%29.html">
-    <b>【うたさちHDD】ファイル一覧(mp3).html</b></a></td>
+  <td class="pl-main1"><a href="%E3%80%90%E3%81%86%E3%81%9F%E3%81%95%E3%81%A1HDD%E3%80%91%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%B8%80%E8%A6%A7%28mp3%29.html">
+    <b><span class="link-hover-b">【うたさちHDD】ファイル一覧(mp3).html</span></b></a></td>
 </tr>
 <tr class="pl-tr">
   <td class="pl-comment">すべての音声ファイル一覧(mp3)、ブラウザの検索機能(CTRL+F)でファイルを探してください<br />ファイルサイズが巨大なのでご注意ください</td>
@@ -259,10 +269,12 @@ v2.01 2026/06<br>
 <meta charset="UTF-8">
 <!--#include virtual="/cgi-bin/mochi2_footer.py" -->
 <hr>
-[<a href="#top">🔝Top</a>] 
-[<a href="/">🏠Home</a>] 
-[<a href="/htdocs/">📖Manual</a>] 
-<a href="/bgv/">🖼️<span class="small">bgv</span></a>
-<a href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small">dev</span></a> - 
-<span class="small">mochikara web^2 all rights reserved.</span>
-</br></br>
+<center>
+[<a class="link-hover-b" href="#top">🔝Top</a>] 
+[<a class="link-hover-b" href="/">🏠Home</a>] 
+[<a class="link-hover-b" href="/htdocs/">📖Manual</a>] 
+<a class="link-hover-b" href="/bgv/">🖼️<span class="small-n">bgv</span></a>
+<a class="link-hover-b" href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small-n">dev</span></a> 
+<div class="small-n">mochikara web^2 all rights reserved.</div>
+</br>
+</center>

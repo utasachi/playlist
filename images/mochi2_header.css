@@ -1,7 +1,7 @@
 /* mochi2_header.css */
 /* 全体 */
 body {
-    font-family: "Segoe UI", "Yu Gothic UI", sans-serif;
+    font-family: Meiryo, sans-serif;
     background: #ffffff;
     color: #000;
     margin: 0;
@@ -11,52 +11,56 @@ a {
     color: #000;
     text-decoration: none;
 }
-/* Explorer風ヘッダー */
-.explorer-header {
-    display: flex;
-    align-items: flex-start;
-    background: #fff;
+/* テーブル 最小*/
+table.layout {
     width: 100%;
-    gap: 10px;
+    border-collapse: collapse;
 }
-/* 右側 */
-.header-text {
-    flex: 1;
+table.layout td {
+    padding: 1px 4px;
+    vertical-align: middle;
 }
-/* 上段 */
-.header-top {
+/* ヘッダの検索input */
+.flex{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 3px 12px;
 }
-/* タイトル */
-.header-title {
-    font-size: 14px;
+.right {
+    margin-left: auto;
+    text-align: right;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     white-space: nowrap;
 }
-/* 検索フォーム */
-.header-search {
-    display: flex;
-    gap: 6px;
-    margin-left: auto;
+.search-input {
+    font-size: 1.25rem;
+    width: 10em;
+    flex-shrink: 1;
+    min-width: 0;
 }
-/* パンくず＋メニュー行 */
-.breadcrumb-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 12px;
+.bgv-input {
+    font-size: 1.25rem;
+    width: 100%;
+    flex-shrink: 1;
+    min-width: 0;
 }
 /* パンくず */
 .breadcrumb {
-    font-size: 13px;
-    flex: 1;
+    width: 100%;
 }
 /* パンくずリンク */
 .breadcrumb a {
     color: #0066cc;
     text-decoration: none;
+}
+.breadcrumb a:hover {
+    background: #def;
+}
+.breadcrumb a:active {
+    background: #cdf;
 }
 /* セパレータ */
 .breadcrumb span {
@@ -89,11 +93,12 @@ a {
     border-radius: 6px;
 }
 .menu-content {
+    font-size: 1.2rem;
     position: absolute;
     right: 0;
     top: 100%;
     min-width: 180px;
-    padding: 6px 0;
+    padding: 4px 0;
     background: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -114,51 +119,65 @@ a {
 }
 /* 超でかい */
 .bbig {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
+    line-height: 1;
 }
 /* でかい */
 .big {
-    font-size: 20px;
+    font-size: 1.4rem;
     font-weight: bold;
+    line-height: 1;
 }
 /* 中くらい */
 .mid {
-    font-size: 14px;
+    font-size: 1.25rem;
     font-weight: bold;
+    line-height: 1;
 }
 .normal {
-    font-size: 13px;
     font-weight: normal;
 }
 .normal-gray {
-    font-size: 13px;
     font-weight: normal;
     color: #444
 }
 .normal-blue {
-    font-size: 12px;
     font-weight: normal;
     color: #448;
 }
 /* 小さい */
-.small {
-    font-size: 9px;
+.small-n {
+    font-size: 0.8rem;
     font-weight: normal;
 }
 /* ボタン */
 .btn {
-    font-size: 16px;
-    padding: 4px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #448;
+    padding: 2px 8px;
+    border: 1px solid #aac;
+    border-radius: 8px;
+    background: #eef8ff;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #def;
+}
+.btn:active {
+    background: #cdf;
 }
 
 /* pre的 */
 .pre-gray {
+    font-size: 0.8rem;
     white-space: pre-wrap;
     padding: 10px 3px 3px 10px;
     background: #EEE;
 }
 .pre-allmp {
+    font-size: 0.8rem;
     white-space: pre-wrap;
     padding: 10px 3px 3px 10px;
     background: #f8f8f8;
@@ -167,56 +186,51 @@ a {
 .pl-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 13px;
 }
 /* プレイリスト一覧 行全体 */
 .pl-tr td {
-    padding: 3px 10px;
+    padding: 4px 4px;
     vertical-align: middle;
 }
 .pl-tr-line0 td {
-    padding: 3px 10px;
-    font-size: 13px;
+    padding: 1px 4px;
     vertical-align: middle;
     background: #ddf;
 }
 .pl-tr-line1 td {
-    padding: 3px 10px;
-    font-size: 13px;
+    padding: 1px 4px;
     vertical-align: middle;
     background: #eee;
 }
 .pl-tr-line2 td {
-    padding: 3px 10px;
-    font-size: 13px;
+    padding: 1px 4px;
     vertical-align: middle;
     background: #fff;
 }
 /* プレイリスト一覧 番号 */
 .pl-no {
-    font-size: 16px;
-    width: 36px;
     text-align: right;
     font-weight: bold;
     background: #eee;
 }
 .pl-no1 {
-    width: 36px;
     text-align: right;
     font-weight: bold;
     background: #f8f8f8;
 }
 /* プレイリスト一覧 アイコン */
 .pl-icon {
+    vertical-align: top;
     text-align: center;
     background: #eee;
 }
 .pl-icon-hover {
     text-align: center;
     background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
 }
 .pl-img {
-    height: 108px;
+    height: 96px;
     object-fit: contain;
     border-radius: 6px;
 }
@@ -229,37 +243,35 @@ a {
 }
 /* プレイリスト一覧 メイン */
 .pl-main0 {
-    font-size: 16px;
     font-weight: bold;
     width: 100%;
     background: #eee;
 }
 .pl-main1 {
-    font-size: 16px;
     font-weight: bold;
     width: 100%;
     background: #f8f8f8;
 }
-.pl-main1-hover {
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-    background: #f8f8f8;
-}
-.pl-main2-hover {
-    font-size: 16px;
+.pl-main2 {
     font-weight: bold;
     width: 100%;
     background: #fff;
 }
+.pl-bmain {
+    font-weight: normal;
+    color: #448;
+}
 .pl-smain {
-    font-size: 15px;
+    font-weight: normal;
+    color: #448;
+}
+.pl-bmain {
     font-weight: normal;
     color: #448;
 }
 /* プレイリスト一覧 コメント */
 .pl-comment {
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: normal;
     color: #444;
     background: #eee;
@@ -267,34 +279,30 @@ a {
 }
 /* アンカー */
 .link-hover a {
-    background: #f8f8f8;
+    padding: 1px 4px;
+    border-radius: 3px;
 }
 /* ホバー*/
 .pl-icon-hover:hover,
-.pl-main1-hover:hover,
-.pl-main2-hover:hover,
 .link-hover:hover {
     background: #def;
 }
 /* クリック */
 .pl-icon-hover:active,
-.pl-main1-hover:active,
-.pl-main2-hover:active,
 .link-hover:active {
     background: #cdf;
 }
+
 /* リンクホバークリック */
 .link-hover-b {
     font-weight: bold;
-    color: #448;
+    color: #226;
+    padding: 1px 4px;
+    border-radius: 3px;
 }
 .link-hover-b:hover {
-    font-weight: bold;
-    color: #448;
     background: #def;
 }
 .link-hover-b:active {
-    font-weight: bold;
-    color: #448;
     background: #cdf;
 }

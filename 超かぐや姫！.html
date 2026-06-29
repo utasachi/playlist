@@ -9,195 +9,205 @@
 <!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
-<link rel="stylesheet" href="images/mochi2_header.css">
+<meta name="viewport" content="width=device-width, initial-scale=0.6">
+<link rel="stylesheet" href="images/mochi2_header.css?v=20260612">
+<link rel="stylesheet" href="images/mochi2_fancy2.css?v=20260612">
 <script src="images/mochi2_script.js" defer></script>
-<div class="explorer-header">
-    <a href="/">
-        <img src="images/mikuodori.gif">
-    </a>
-    <div class="header-text">
-        <div class="header-top">
-            <div class="header-title">
-<img src="images/mochikaraweb2.png" height="45" style="float:left; margin-right:10px;">
-v2.01 2026/06<br>
-🔈プレイリスト 2026/06/18 09時作成
+<table class="layout">
+    <tr>
+        <td rowspan="3"><a href="/"><img src="images/mikuodori.gif"></a></td>
+        <td colspan="2">
+            <div class="flex">
+                <div><img src="images/mochikaraweb2.png" height="53"></div>
+                <div class="right">
+                    <form class="search-form" action="/cgi-bin/mochi2_search.py" method="get">
+                        <input class="search-input" type="text" name="q" maxlength="64">
+                        <input class="btn" type="submit" value="検索">
+                    </form>
+                </div>
             </div>
-            <form class="header-search" action="/cgi-bin/mochi2_search.py" method="get">
-                <input type="text" name="q" size="32" maxlength="64">
-                <input type="submit" value="検索">
-            </form>
-        </div>
-        <div class="breadcrumb-row">
-            <div class="breadcrumb">
-                <span class=big>超かぐや姫！</span>
-            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="small-n">
+v2.01 2026/06 playlist 2026/06/26作成
+        </td>
+        <td rowspan="2" class="right">
             <details class="menu" data-menu="main">
                 <summary class="menu-btn">︙</summary>
                 <div class="menu-content">
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >🔉 音量(小)</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >🔊 音量(大)</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >音量(小) 🔉 </a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >音量(大) 🔊</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"   >⏭️ 次の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"  >⏮️ 前の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst" >⏯️ 停止/再生</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"   >⏪ 曲始めから</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"
+                     onclick="return confirm('⏭️次の曲に切り替えますか？');" >次の曲 ⏭️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"
+                     onclick="return confirm('⏮️前の曲に切り替えますか？');" >前の曲 ⏮️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst"
+                     onclick="return confirm('⏯️停止/再生切り替えますか？');">停止/再生 ⏯️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"
+                     onclick="return confirm('⏪曲始めから再生しますか？');" >曲始めから ⏪</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >🔳 全画面</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >🎶 次の音声</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >🔤 次の字幕</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >全画面 🔳</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >次の音声 🎶</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >次の字幕 🔤</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >⬆️ 字幕遅延減少</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >⬇️ 字幕遅延増加</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >字幕遅延減少 ⬆️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >字幕遅延増加 ⬇️</a>
                 </div>
             </details>
-        </div>
-    </div>
-</div>
-<a href="index.html"><img class="pl-sicon" src="https://cdn.tower.jp/za/o/4W/zaP5_G3908764W.JPG"></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="breadcrumb">
+<span class=big>超かぐや姫！</span>
+        </td>
+    </tr>
+</table><a href="index.html"><img class="pl-sicon" src="https://cdn.tower.jp/za/o/4W/zaP5_G3908764W.JPG"></a>
 <div class="pre-gray">日本最古の物語『かぐや姫』 × 豪華ボカロP 新時代の音楽アニメーションプロジェクト、開幕！
-新進気鋭のクリエイターたちが繰り広げる壮大なライブ・エンターテイメントが今、始まる。<hr></div>
+新進気鋭のクリエイターたちが繰り広げる壮大なライブ・エンターテイメントが今、始まる。</div><hr>
 <table class="pl-table">
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">1</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5Dray%20%28%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20Version%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5Dray%20%28%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20Version%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/356MRZ6P5h0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5Dray%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81Version%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%20%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20%EF%BC%86%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%20%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20THE%20FIRST%20TAKE.mp4"><div class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</div>
-<span class="mid">[超かぐや姫！]ray 超かぐや姫！Version／かぐや (cv. 夏吉ゆうこ) ＆ 月見ヤチヨ (cv. 早見沙織) THE FIRST TAKE.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5Dray%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81Version%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%20%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20%EF%BC%86%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%20%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20THE%20FIRST%20TAKE.mp4"><span class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</span><br>
+<span class="link-hover-b">[超かぐや姫！]ray 超かぐや姫！Version／かぐや (cv. 夏吉ゆうこ) ＆ 月見ヤチヨ (cv. 早見沙織) THE FIRST TAKE.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5Dray%20%28%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20Version%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 挿入歌]ray (超かぐや姫！ Version)／かぐや (cv.夏吉ゆうこ)、月見ヤチヨ (cv.早見沙織) youtube.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5Dray%20%28%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20Version%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%20%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]ray (超かぐや姫！ Version)／かぐや (cv.夏吉ゆうこ)、月見ヤチヨ (cv.早見沙織) youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ray (超かぐや姫！ Version) ／ かぐや (cv.夏吉ゆうこ)、月見ヤチヨ (cv.早見沙織)<br>超かぐや姫！ 挿入歌 表示回数:2,376,599回 [<a class="link-hover" href="https://www.uta-net.com/song/160943/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=075raB27CW8">▶️youtube</a>] </td>
+  <td class="pl-comment">ray (超かぐや姫！ Version) ／ かぐや (cv.夏吉ゆうこ)、月見ヤチヨ (cv.早見沙織)<br>超かぐや姫！ 挿入歌 表示回数:2,401,766回 [<a class="link-hover" href="https://www.uta-net.com/song/160943/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=075raB27CW8">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">2</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DTell%20Your%20World%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DTell%20Your%20World%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/24OIBLd8uu8/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DTell%20Your%20World%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]Tell Your World／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DTell%20Your%20World%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]Tell Your World／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Tell Your World ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:420,475回 [<a class="link-hover" href="https://www.uta-net.com/song/127069/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=24OIBLd8uu8">▶️youtube</a>] </td>
+  <td class="pl-comment">Tell Your World ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:421,414回 [<a class="link-hover" href="https://www.uta-net.com/song/127069/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=24OIBLd8uu8">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">3</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E4%B8%BB%E9%A1%8C%E6%AD%8C%5DEx-Otogibanashi%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E4%B8%BB%E9%A1%8C%E6%AD%8C%5DEx-Otogibanashi%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/owEBHHZg38s/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E4%B8%BB%E9%A1%8C%E6%AD%8C%5DEx-Otogibanashi%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 主題歌]Ex-Otogibanashi／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E4%B8%BB%E9%A1%8C%E6%AD%8C%5DEx-Otogibanashi%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 主題歌]Ex-Otogibanashi／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">Ex-Otogibanashi ／ かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織)<br>超かぐや姫！ 主題歌 表示回数:111,102回 [<a class="link-hover" href="https://www.uta-net.com/song/387561/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=owEBHHZg38s">▶️youtube</a>] </td>
+  <td class="pl-comment">Ex-Otogibanashi ／ かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織)<br>超かぐや姫！ 主題歌 表示回数:113,587回 [<a class="link-hover" href="https://www.uta-net.com/song/387561/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=owEBHHZg38s">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">4</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%AB%B9%E5%8F%96%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8A%E3%82%A4%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%AB%B9%E5%8F%96%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8A%E3%82%A4%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/C1O_i9nZEPI/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%AB%B9%E5%8F%96%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8A%E3%82%A4%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]竹取オーバーナイトセンセーション／covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ 【歌ってみた】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%AB%B9%E5%8F%96%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8A%E3%82%A4%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]竹取オーバーナイトセンセーション／covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ 【歌ってみた】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">竹取オーバーナイトセンセーション ／ covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！<br>超かぐや姫！ 表示回数:89,728回 [<a class="link-hover" href="https://www.uta-net.com/song/135850/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=C1O_i9nZEPI">▶️youtube</a>] </td>
+  <td class="pl-comment">竹取オーバーナイトセンセーション ／ covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！<br>超かぐや姫！ 表示回数:90,405回 [<a class="link-hover" href="https://www.uta-net.com/song/135850/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=C1O_i9nZEPI">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">5</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%AD%E3%83%B3%E3%83%AA%E3%83%BC%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%AD%E3%83%B3%E3%83%AA%E3%83%BC%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/enzi3ZZmFoE/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%AD%E3%83%B3%E3%83%AA%E3%83%BC%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]ロンリーユニバース／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%AD%E3%83%B3%E3%83%AA%E3%83%BC%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]ロンリーユニバース／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ロンリーユニバース ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:51,852回 [<a class="link-hover" href="https://www.uta-net.com/song/350078/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=enzi3ZZmFoE">▶️youtube</a>] </td>
+  <td class="pl-comment">ロンリーユニバース ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:52,126回 [<a class="link-hover" href="https://www.uta-net.com/song/350078/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=enzi3ZZmFoE">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">6</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/g6yAXqs7GpQ/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20THE%20FIRST%20TAKE.mp4"><div class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</div>
-<span class="mid">[超かぐや姫！ 挿入歌]ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.)／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) THE FIRST TAKE.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/THE%20FIRST%20TAKE/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20THE%20FIRST%20TAKE.mp4"><span class="normal-blue">📹 /MV_スクロール歌詞/THE FIRST TAKE</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.)／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) THE FIRST TAKE.mp4</span>
 </a></td></tr>
-<tr class="pl-tr"><td class="pl-main2-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 挿入歌]ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.)／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) mv.mp4</span>
+<tr class="pl-tr"><td class="pl-main2">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%A4%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%B3%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%EF%BC%86%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%E3%80%81%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.)／かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織) mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.) ／ かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織)<br>超かぐや姫！ 挿入歌 表示回数:33,072回 [<a class="link-hover" href="https://www.uta-net.com/song/387560/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=g6yAXqs7GpQ">▶️youtube</a>] </td>
+  <td class="pl-comment">ワールドイズマイン CPK! Remix (かぐや＆月見ヤチヨ ver.) ／ かぐや(夏吉ゆうこ)、月見ヤチヨ(早見沙織)<br>超かぐや姫！ 挿入歌 表示回数:34,199回 [<a class="link-hover" href="https://www.uta-net.com/song/387560/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=g6yAXqs7GpQ">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">7</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%EF%BC%8FMORE%20MORE%20JUMP%EF%BC%81%20%E3%80%90%E6%9C%AC%E7%B7%A8%E6%98%A0%E5%83%8F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%EF%BC%8FMORE%20MORE%20JUMP%EF%BC%81%20%E3%80%90%E6%9C%AC%E7%B7%A8%E6%98%A0%E5%83%8F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/uYBtslZaOuc/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%EF%BC%8FMORE%20MORE%20JUMP%EF%BC%81%20%E3%80%90%E6%9C%AC%E7%B7%A8%E6%98%A0%E5%83%8F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]ハッピーシンセサイザ／MORE MORE JUMP！ 【本編映像】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%EF%BC%8FMORE%20MORE%20JUMP%EF%BC%81%20%E3%80%90%E6%9C%AC%E7%B7%A8%E6%98%A0%E5%83%8F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]ハッピーシンセサイザ／MORE MORE JUMP！ 【本編映像】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">ハッピーシンセサイザ ／ MORE MORE JUMP！<br>超かぐや姫！ 表示回数:31,455回 [<a class="link-hover" href="https://www.uta-net.com/song/315085/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=xD3amnjfxac">▶️youtube</a>] </td>
+  <td class="pl-comment">ハッピーシンセサイザ ／ MORE MORE JUMP！<br>超かぐや姫！ 表示回数:31,534回 [<a class="link-hover" href="https://www.uta-net.com/song/315085/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=xD3amnjfxac">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">8</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%A1%E3%83%AB%E3%83%88%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%A1%E3%83%AB%E3%83%88%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/qbT7bBYz5YA/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%A1%E3%83%AB%E3%83%88%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 挿入歌]メルト CPK! Remix (かぐや ver.)／かぐや(夏吉ゆうこ) youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E3%83%A1%E3%83%AB%E3%83%88%20CPK%21%20Remix%20%28%E3%81%8B%E3%81%90%E3%82%84%20ver.%29%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]メルト CPK! Remix (かぐや ver.)／かぐや(夏吉ゆうこ) youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">メルト CPK! Remix (かぐや ver.) ／ かぐや(夏吉ゆうこ)<br>超かぐや姫！ 挿入歌 表示回数:18,834回 [<a class="link-hover" href="https://www.uta-net.com/song/387559/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=TdX7zENi_jU">▶️youtube</a>] </td>
+  <td class="pl-comment">メルト CPK! Remix (かぐや ver.) ／ かぐや(夏吉ゆうこ)<br>超かぐや姫！ 挿入歌 表示回数:19,525回 [<a class="link-hover" href="https://www.uta-net.com/song/387559/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=TdX7zENi_jU">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">9</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%88%E3%83%AA%E3%83%8E%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%88%E3%83%AA%E3%83%8E%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/gsGjcLVI6X4/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%88%E3%83%AA%E3%83%8E%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]トリノコシティ／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E3%83%88%E3%83%AA%E3%83%8E%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%EF%BC%8Fcovered%20by%20%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]トリノコシティ／covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！ 【歌ってみた】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
 <tr class="pl-tr">
-  <td class="pl-comment">トリノコシティ ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:18,742回 [<a class="link-hover" href="https://www.uta-net.com/song/350079/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=gsGjcLVI6X4">▶️youtube</a>] </td>
+  <td class="pl-comment">トリノコシティ ／ covered by 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！<br>超かぐや姫！ 表示回数:19,355回 [<a class="link-hover" href="https://www.uta-net.com/song/350079/">🎼uta-net</a>] [<a class="link-hover" href="https://www.youtube.com/watch?v=gsGjcLVI6X4">▶️youtube</a>] </td>
 </tr>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">10</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%203D%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%203D%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/pnb_BVChIaw/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%203D%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 挿入歌]私は、わたしの事が好き。／かぐや(夏吉ゆうこ) 3Dライブ映像.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%203D%E3%83%A9%E3%82%A4%E3%83%96%E6%98%A0%E5%83%8F.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]私は、わたしの事が好き。／かぐや(夏吉ゆうこ) 3Dライブ映像.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -207,11 +217,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">11</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/T1AW8Gj1Xyg/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4"><div class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！ 挿入歌]私は、わたしの事が好き。／かぐや(夏吉ゆうこ) youtube.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E6%8C%BF%E5%85%A5%E6%AD%8C%5D%E7%A7%81%E3%81%AF%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%E4%BA%8B%E3%81%8C%E5%A5%BD%E3%81%8D%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20youtube.mp4"><span class="normal-blue">📺 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！ 挿入歌]私は、わたしの事が好き。／かぐや(夏吉ゆうこ) youtube.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -221,11 +231,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">12</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DRemember%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DRemember%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/UE1y01q6wzQ/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DRemember%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]Remember／月見ヤチヨ(cv.早見沙織) mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DRemember%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]Remember／月見ヤチヨ(cv.早見沙織) mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -235,11 +245,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">13</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DReply%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DReply%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/QiSE1n_X4qU/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DReply%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]Reply／かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5DReply%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]Reply／かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -249,11 +259,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">14</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E5%A4%A2%E3%82%92%E3%81%BF%E3%82%8B%E5%B3%B6%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E5%A4%A2%E3%82%92%E3%81%BF%E3%82%8B%E5%B3%B6%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/TiovwU3mJNE/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E5%A4%A2%E3%82%92%E3%81%BF%E3%82%8B%E5%B3%B6%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><div class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]夢をみる島／covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ 【歌ってみた】.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E5%A4%A2%E3%82%92%E3%81%BF%E3%82%8B%E5%B3%B6%EF%BC%8Fcovered%20by%20%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20from%20%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%20%E3%80%90%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%91.mp4"><span class="normal-blue">🎞️ /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]夢をみる島／covered by かぐや(cv.夏吉ゆうこ) from 超かぐや姫！ 【歌ってみた】.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -263,11 +273,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">15</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E6%98%9F%E9%99%8D%E3%82%8B%E6%B5%B7%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E6%98%9F%E9%99%8D%E3%82%8B%E6%B5%B7%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/h5XQqKuek5A/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E6%98%9F%E9%99%8D%E3%82%8B%E6%B5%B7%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]星降る海／月見ヤチヨ(cv.早見沙織) mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E6%98%9F%E9%99%8D%E3%82%8B%E6%B5%B7%EF%BC%8F%E6%9C%88%E8%A6%8B%E3%83%A4%E3%83%81%E3%83%A8%28cv.%E6%97%A9%E8%A6%8B%E6%B2%99%E7%B9%94%29%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]星降る海／月見ヤチヨ(cv.早見沙織) mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -277,11 +287,11 @@ v2.01 2026/06<br>
 
 <tr class="pl-tr">
   <td rowspan=2 class="pl-no">16</td>
-  <td rowspan=2 class="pl-icon-hover"><a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%9E%AC%E9%96%93%E3%80%81%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%83%BC%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20mv.mp4">
+  <td rowspan=2 class="pl-icon-hover"><a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%9E%AC%E9%96%93%E3%80%81%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%83%BC%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20mv.mp4">
     <img class="pl-img" src="https://i.ytimg.com/vi/h9c0gegwcM0/mqdefault.jpg"></a></td>
-  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1-hover">
-<a class="mvlink" href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%9E%AC%E9%96%93%E3%80%81%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%83%BC%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20mv.mp4"><div class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</div>
-<span class="mid">[超かぐや姫！]瞬間、シンフォニー。／かぐや(cv.夏吉ゆうこ) mv.mp4</span>
+  <td class="pl-main0"><table class="pl-table"><tr class="pl-tr"><td class="pl-main1">
+<a href="/MV_%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E6%AD%8C%E8%A9%9E/%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81/%5B%E8%B6%85%E3%81%8B%E3%81%90%E3%82%84%E5%A7%AB%EF%BC%81%5D%E7%9E%AC%E9%96%93%E3%80%81%E3%82%B7%E3%83%B3%E3%83%95%E3%82%A9%E3%83%8B%E3%83%BC%E3%80%82%EF%BC%8F%E3%81%8B%E3%81%90%E3%82%84%28cv.%E5%A4%8F%E5%90%89%E3%82%86%E3%81%86%E3%81%93%29%20mv.mp4"><span class="normal-blue">🎬 /MV_スクロール歌詞/超かぐや姫！</span><br>
+<span class="link-hover-b">[超かぐや姫！]瞬間、シンフォニー。／かぐや(cv.夏吉ゆうこ) mv.mp4</span>
 </a></td></tr>
 </table></td>
 </tr>
@@ -293,10 +303,10 @@ v2.01 2026/06<br>
 <meta charset="UTF-8">
 <!--#include virtual="/cgi-bin/mochi2_footer.py" -->
 <hr>
-[<a href="#top">🔝Top</a>] 
-[<a href="/">🏠Home</a>] 
-[<a href="/htdocs/">📖Manual</a>] 
-<a href="/bgv/">🖼️<span class="small">bgv</span></a>
-<a href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small">dev</span></a> - 
-<span class="small">mochikara web^2 all rights reserved.</span>
-</br></br>
+[<a class="link-hover-b" href="#top">🔝Top</a>] 
+[<a class="link-hover-b" href="/">🏠Home</a>] 
+[<a class="link-hover-b" href="/htdocs/">📖Manual</a>] 
+<a class="link-hover-b" href="/bgv/">🖼️<span class="small-n">bgv</span></a>
+<a class="link-hover-b" href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small-n">dev</span></a> 
+<div class="small"> - mochikara web^2 all rights reserved.</div>
+</br>

@@ -9,53 +9,63 @@
 <!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
-<link rel="stylesheet" href="images/mochi2_header.css">
+<meta name="viewport" content="width=device-width, initial-scale=0.6">
+<link rel="stylesheet" href="images/mochi2_header.css?v=20260612">
+<link rel="stylesheet" href="images/mochi2_fancy2.css?v=20260612">
 <script src="images/mochi2_script.js" defer></script>
-<div class="explorer-header">
-    <a href="/">
-        <img src="images/mikuodori.gif">
-    </a>
-    <div class="header-text">
-        <div class="header-top">
-            <div class="header-title">
-<img src="images/mochikaraweb2.png" height="45" style="float:left; margin-right:10px;">
-v2.01 2026/06<br>
-🔈プレイリスト 2026/06/18 09時作成
+<table class="layout">
+    <tr>
+        <td rowspan="3"><a href="/"><img src="images/mikuodori.gif"></a></td>
+        <td colspan="2">
+            <div class="flex">
+                <div><img src="images/mochikaraweb2.png" height="53"></div>
+                <div class="right">
+                    <form class="search-form" action="/cgi-bin/mochi2_search.py" method="get">
+                        <input class="search-input" type="text" name="q" maxlength="64">
+                        <input class="btn" type="submit" value="検索">
+                    </form>
+                </div>
             </div>
-            <form class="header-search" action="/cgi-bin/mochi2_search.py" method="get">
-                <input type="text" name="q" size="32" maxlength="64">
-                <input type="submit" value="検索">
-            </form>
-        </div>
-        <div class="breadcrumb-row">
-            <div class="breadcrumb">
-                <span class=big>【うたさちHDD】ファイル一覧(動画)</span>
-            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="small-n">
+v2.01 2026/06 playlist 2026/06/26作成
+        </td>
+        <td rowspan="2" class="right">
             <details class="menu" data-menu="main">
                 <summary class="menu-btn">︙</summary>
                 <div class="menu-content">
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >🔉 音量(小)</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >🔊 音量(大)</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=down"   >音量(小) 🔉 </a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=up"     >音量(大) 🔊</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"   >⏭️ 次の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"  >⏮️ 前の曲</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst" >⏯️ 停止/再生</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"   >⏪ 曲始めから</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=next"
+                     onclick="return confirm('⏭️次の曲に切り替えますか？');" >次の曲 ⏭️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=prior"
+                     onclick="return confirm('⏮️前の曲に切り替えますか？');" >前の曲 ⏮️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=playst"
+                     onclick="return confirm('⏯️停止/再生切り替えますか？');">停止/再生 ⏯️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=home"
+                     onclick="return confirm('⏪曲始めから再生しますか？');" >曲始めから ⏪</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >🔳 全画面</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >🎶 次の音声</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >🔤 次の字幕</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=fullsc" >全画面 🔳</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=track"  >次の音声 🎶</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=nextsb" >次の字幕 🔤</a>
                     <hr>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >⬆️ 字幕遅延減少</a>
-                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >⬇️ 字幕遅延増加</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f1"     >字幕遅延減少 ⬆️</a>
+                    <a href="/cgi-bin/mochi2_uwsc.py?k=f2"     >字幕遅延増加 ⬇️</a>
                 </div>
             </details>
-        </div>
-    </div>
-</div>
-<a href="index.html"><img class="pl-sicon" src="images/ファイル一覧動画.png"></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="breadcrumb">
+<span class=big>【うたさちHDD】ファイル一覧(動画)</span>
+        </td>
+    </tr>
+</table><a href="index.html"><img class="pl-sicon" src="images/ファイル一覧動画.png"></a>
 <div class="pre-gray">すべての動画一覧(mp4など)、ブラウザの検索機能(CTRL+F)でファイルを探してください
-ファイルサイズが巨大なのでご注意ください<hr></div>
+ファイルサイズが巨大なのでご注意ください</div><hr>
 <div class="pre-allmp">一回お休み次の方どうぞ.mp4
 配信カラオケ使いたい.mp4
 Movie\AMV\あ行\(SH)[(原)SDガンダムフォース] イーノックオドル(埋込).mp4
@@ -9479,6 +9489,55 @@ MV_スクロール歌詞\超かぐや姫！\[超かぐや姫！]竹取オーバ�
 持込\20260425\まえちゃん\[THE IDOLM@STER 20th Anniversary 876 PRODUCTION FES Dearly Stars×vα-liv LIVE -UNDER ONE SKY !!!!!!- 夜公演] プリコグ.mp4
 持込\20260425\まえちゃん\[如月千早武道館単独公演「OathONE」DAY1] 輝夜.mp4
 持込\20260425\まえちゃん\[如月千早武道館単独公演「OathONE」DAY2] 月下祭 ～la festa sotto la luna～.mp4
+持込\20260620\kawabe\10-FEET - 第ゼロ感_ LIVE From 京都大作戦2023.mp4
+持込\20260620\kawabe\GLAY _ 彼女の“Modern⋯” (MV).mp4
+持込\20260620\kawabe\MAN WITH A MISSION Database（LIVE）.mp4
+持込\20260620\kawabe\MAN WITH A MISSION 『FLY AGAIN 2019』.mp4
+持込\20260620\kawabe\X Japan - Rusty Nail (The Last Live).mp4
+持込\20260620\kawabe\X Japan -紅 (The Last Live).mp4
+持込\20260620\kawabe\[Kis-My-Ft2] C’monova (Music Video).mp4
+持込\20260620\kawabe\[Kis-My-Ft2] Luv Bias（LIVE TOUR 2021 HOME）.mp4
+持込\20260620\kawabe\[サカナクション] グッドバイ　-Music Video-.mp4
+持込\20260620\kawabe\くるり -  ワールズエンド・スーパーノヴァ（MV）.mp4
+持込\20260620\kawabe\くるり - ばらの花 _ Live from FUJI & SUN '21.mp4
+持込\20260620\kawabe\サカナクション_モス(SAKANAQUARIUM 2019_834.194_).mp4
+持込\20260620\raweel\[FLAVOR FOLEY feat. SF-A2 Miki] Human.mp4
+持込\20260620\raweel\[isonosuke feat. 知声] こえになる.mp4
+持込\20260620\raweel\[MIMI feat. saewool] 痛いの痛いの飛んでいけっ.mp4
+持込\20260620\raweel\[OSTER project feat. 初音ミク] 雨のちSweet＊Drops.mp4
+持込\20260620\raweel\[OSTER project feat. 宮舞モカ] アイマイ・モカ.mp4
+持込\20260620\raweel\[SNOW MIKU 2026] SHIAWASE FOR YOU!.mp4
+持込\20260620\raweel\[The Wolfhound] My Little Armalite.mp4
+持込\20260620\raweel\[UNBEATABLE] SQUARE UP.mp4
+持込\20260620\raweel\[yotuqu feat. 初音ミク] いつかの歌.mp4
+持込\20260620\raweel\[くわ feat. 宮舞モカ] オーバードライブ・ガール.mp4
+持込\20260620\raweel\[なみぐる feat. ずんだもん] ずんだレンジャー.mp4
+持込\20260620\raweel\[なみぐる feat. ずんだもん・春日部つむぎ] ずんだシェイキング.mp4
+持込\20260620\raweel\[にお feat. 鏡音リン] こわいこと.mp4
+持込\20260620\raweel\[ふむじま feat. 足立レイ] まちをあるけば.mp4
+持込\20260620\raweel\[サムサp Feat. 重音テト・足立レイ] ヒロインRE♡クエスト.mp4
+持込\20260620\raweel\[ゼンレスゾーンゼロ] キャンデー.mp4
+持込\20260620\raweel\[ティンクルスターナイツ] Twinkle Star Nights.mp4
+持込\20260620\raweel\[ティンクルスターナイツ] 大嫌い!!.mp4
+持込\20260620\raweel\[プロジェクトセカイ カラフルステージ！] JUMPIN' OVER!.mp4
+持込\20260620\raweel\[ミ瑞 feat. 知声・AiSuu] 19月にまた会いましょう！.mp4
+持込\20260620\raweel\[ミ瑞 feat. 重音テトSV] 暮れて、終えば。.mp4
+持込\20260620\raweel\[ヤマギシコージ feat. 初音ミク] アニマーレ・ファンファーレ.mp4
+持込\20260620\raweel\[ラズロ feat. 裏命] はい、お疲れさん.mp4
+持込\20260620\raweel\[初音ミク LAWSON 50th Anniversary Special LIVE] シアンブルー.mp4
+持込\20260620\raweel\[原神] ムーンライト.mp4
+持込\20260620\raweel\[広末慧 feat. 重音テトSV2] 最恋尾.mp4
+持込\20260620\raweel\[月曜日の友達] 月曜日.mp4
+持込\20260620\raweel\[東京真中 feat. 知声] ハイパーメルト.mp4
+持込\20260620\raweel\[東京真中 feat. 知声] 海へ行こうよ.mp4
+持込\20260620\raweel\[東京真中 feat. 重音テト] ドゥーマー.mp4
+持込\20260620\raweel\[柏木カレキ feat. 重音テト＆知声] あの子みたいに.mp4
+持込\20260620\raweel\[濁茶 feat. 知声] あるいは地下鉄の私.mp4
+持込\20260620\raweel\[菅原圭] ORACLE.mp4
+持込\20260620\raweel\[阿修 feat. 足立レイ] 無限大のゼロ.mp4
+持込\20260620\よーがん\[機動戦士ガンダム30周年記念「Soul G～すべての戦士に捧げる音楽祭～] DREAMS／麻倉あきら ROmantic Mode.mp4
+持込\20260620\よーがん\{B子} 俺よりマシ THE FIRST TAKE／水原一平.mp4
+持込\20260620\よーがん\【B子】 ライブ版 水原一平『我が名は水原一平』（五月病なんてぶっ飛ばせLIVE @ ペイペイドーム）.mp4
 持込（個人別）\げろりん\Live\Animelo Summer Live 2019\[Animelo Summer Live 2019 ＜day1＞けものフレンズ]ようこそジャパリパークへ／けものフレンズ×i☆RiSphere.mp4
 持込（個人別）\げろりん\Live\Animelo Summer Live 2019\[Animelo Summer Live 2019 ＜day1＞ナカノヒトゲノム【実況中】]僕を見つけて／fhana.mp4
 持込（個人別）\げろりん\Live\Animelo Summer Live 2019\[Animelo Summer Live 2019 ＜day1＞川柳少女]ORDINARY LOVE／逢田梨香子.mp4
@@ -11323,17 +11382,17 @@ Movie\静止画・スライドショー\[車輪の国、向日葵の少女] 紅�
 持込\2015以前\セイバー\[鋼殻のレギオス]Brave your truth／Daisy×Daisy,アニメ,on.flv
 持込\2015以前\セイバー\[鎖-クサリ-]星座／Suara,LIVE,on.flv
 
---- total: 11266 files ---
+--- total: 11315 files ---
 </div>
 <!--#config timefmt="%Y-%m-%d %H:%M" -->
 <!--#config errmsg="[SSI ERROR]" -->
 <meta charset="UTF-8">
 <!--#include virtual="/cgi-bin/mochi2_footer.py" -->
 <hr>
-[<a href="#top">🔝Top</a>] 
-[<a href="/">🏠Home</a>] 
-[<a href="/htdocs/">📖Manual</a>] 
-<a href="/bgv/">🖼️<span class="small">bgv</span></a>
-<a href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small">dev</span></a> - 
-<span class="small">mochikara web^2 all rights reserved.</span>
-</br></br>
+[<a class="link-hover-b" href="#top">🔝Top</a>] 
+[<a class="link-hover-b" href="/">🏠Home</a>] 
+[<a class="link-hover-b" href="/htdocs/">📖Manual</a>] 
+<a class="link-hover-b" href="/bgv/">🖼️<span class="small-n">bgv</span></a>
+<a class="link-hover-b" href="/cgi-bin/mochi2_ytdl.py">🛠️<span class="small-n">dev</span></a> 
+<div class="small"> - mochikara web^2 all rights reserved.</div>
+</br>
