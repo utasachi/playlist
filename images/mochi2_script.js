@@ -38,3 +38,24 @@ if (location.href.startsWith("file:///")) {
         a.href = "index.html";
     });
 }
+function changePitch(diff) {
+    const input = document.getElementById('pitch_value');
+    let value = parseInt(input.value) + diff;
+    value = Math.max(-12, Math.min(12, value));
+    input.value = value;
+    updatePitchDisplay();
+}
+function resetPitch() {
+    document.getElementById('pitch_value').value = 0;
+    updatePitchDisplay();
+}
+function updatePitchDisplay() {
+    const value = parseInt(
+        document.getElementById('pitch_value').value
+    );
+    document.getElementById('pitch_display').textContent =
+        value > 0 ? '+' + value :
+        value < 0 ? value :
+        '±0';
+}
+updatePitchDisplay();
