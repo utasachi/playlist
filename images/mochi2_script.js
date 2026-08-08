@@ -21,23 +21,6 @@ function toggleArea() {
         el.style.display = "none";
     }
 }
-if (location.href.startsWith("file:///")) {
-    const drive =
-        decodeURIComponent(location.pathname).match(/^\/([A-Za-z]:)/)[1];
-    document.querySelectorAll("a.mvlink").forEach(a => {
-    const path =
-        (drive + "/karaoke"
-        + decodeURIComponent(a.getAttribute("href")))
-        .replace(/\//g, "\\");
-        a.href =
-            "http://localhost:13579/browser.html?path="
-            + encodeURI(path);
-        a.target = "mpc";
-    });
-    document.querySelectorAll('a[href="/"]').forEach(a => {
-        a.href = "index.html";
-    });
-}
 function changePitch(diff) {
     const input = document.getElementById('pitch_value');
     let value = parseInt(input.value) + diff;
@@ -58,4 +41,21 @@ function updatePitchDisplay() {
         value < 0 ? value :
         '±0';
 }
-updatePitchDisplay();
+if (document.getElementById('pitch_value')) {
+    updatePitchDisplay();
+}
+if (location.protocol === "file:") {
+    const currentPath = decodeURIComponent(location.pathname);
+    const drive = currentPath.slice(1, 3);
+    document.querySelectorAll('a[href$=".mp4"]').forEach(a => {
+        const path =
+            (drive + "/karaoke" + decodeURIComponent(a.getAttribute("href")))
+            .replaceAll("/", "\\");
+        a.href =
+            "http://localhost:13579/browser.html?path=" + encodeURI(path);
+        a.target = "mpc";
+    });
+    document.querySelectorAll('a[href="/"]').forEach(a => {
+        a.href = "index.html";
+    });
+}
